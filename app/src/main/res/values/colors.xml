@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#383838</color>
+    <color name="colorSecondary">#FF000000</color>
+
+    <color name="green">#00FF6A</color>
+
+    <color name="textPrimary">#888888</color>
+    <color name="textSecondary">#4A4A4B</color>
+
+
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="orange">#FF7A00</color>
+    <color name="purple">#FF00B8</color>
+
+    <color name="splashEnjoy">#E5000000</color>
+
+    <color name="refund">#FF2E00</color>
+
+    <color name="bg">#111111</color>
+    <color name="colorAlertDialogText">#FF4949</color>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.login.RegionActivity"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvPickRegion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsmedium"
+            android:text="@string/lbl_region_pick"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/green"
+            android:textAlignment="center"
+            android:layout_marginTop="@dimen/margin_large"/>
+
+        <LinearLayout
+            android:layout_below="@id/tvPickRegion"
+            android:id="@+id/llLocationBox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:background="@drawable/background_search_location_box"
+            android:layout_marginLeft="@dimen/margin_xlarge"
+            android:paddingVertical="@dimen/margin_card_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/baseline_search_white_24dp"
+                android:tint="@color/green"
+                android:paddingLeft="@dimen/margin_medium_2"/>
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/interregular"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textPrimary"
+                android:hint="@string/lbl_region_search_location"
+                android:background="@android:color/transparent"
+                android:paddingLeft="@dimen/margin_medium_2_18"
+                android:paddingRight="@dimen/margin_xxxxlarge"
+                android:paddingBottom="@dimen/margin_small"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/tvPickRegion"
+            android:id="@+id/btnSearchLocation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/gridicons_location"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginRight="@dimen/margin_xlarge"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_below="@id/btnSearchLocation"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/ivCities"
+            android:layout_width="@dimen/margin_xxxxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:src="@drawable/cities"
+            android:layout_marginTop="@dimen/margin_large"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvCities"
+            android:layout_below="@id/ivCities"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:fontFamily="@font/interregular"
+            android:text="@string/lbl_region_cities"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/white"
+            android:background="@color/textSecondary"
+            android:paddingTop="@dimen/margin_medium"
+            android:paddingLeft="@dimen/margin_large"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/tvCities"
+            android:id="@+id/rvCitiesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.cinema.CinemaDetailActivity"
+    android:background="@color/bg"
+    android:paddingBottom="@dimen/margin_medium_3">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- App Bar -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBackCinemaDetailView"
+            android:layout_width="@dimen/margin_xxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:src="@drawable/baseline_chevron_left_white_24dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_medium"
+            android:layout_gravity="fill_vertical" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/dmsbold"
+            android:text="@string/lbl_cinema_detail"
+            android:textSize="@dimen/text_regular_2x_18"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_gravity="fill_vertical"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btnFav"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xlarge"
+            android:src="@drawable/fav"
+            android:layout_marginTop="@dimen/margin_medium_10"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:layout_gravity="fill_vertical" />
+
+        <FrameLayout
+            android:id="@+id/flVideoViewCinemaInfo"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_below="@id/btnBackCinemaDetailView">
+
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/btnPlayCinemaInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/background_play_button"
+                android:visibility="gone"
+                app:backgroundTint="@color/colorPrimary"
+                app:elevation="@dimen/margin_small" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <VideoView
+                    android:id="@+id/vvVideoCinemaInfo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="189dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:saveEnabled="true" />
+
+            </RelativeLayout>
+
+        </FrameLayout>
+
+<!--        <androidx.appcompat.widget.AppCompatImageButton-->
+<!--            android:layout_below="@id/flVideoViewCinemaInfo"-->
+<!--            android:id="@+id/btnPlayOrPause"-->
+<!--            android:layout_width="@dimen/margin_xxlarge"-->
+<!--            android:layout_height="@dimen/margin_xxlarge"-->
+<!--            android:layout_centerHorizontal="true"-->
+<!--            android:background="@drawable/background_cinema_play"-->
+<!--            android:src="@drawable/ic_baseline_play_arrow_white_24dp"-->
+<!--            android:tintMode="@color/white"-->
+<!--            android:layout_marginTop="@dimen/margin_xxxlarge"/>-->
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/flVideoViewCinemaInfo"
+            android:id="@+id/tvCinema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interbold"
+            android:text="@string/lbl_vh_cinema_name"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/tvCinema"
+            android:id="@+id/tvCinemaLocation"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interbold"
+            android:text="@string/lbl_checkout_movie_location"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_below="@id/tvCinema"
+            android:layout_alignParentEnd="true"
+            android:layout_width="@dimen/margin_large"
+            android:layout_height="@dimen/margin_large"
+            android:src="@drawable/location_vector"
+            android:layout_marginTop="@dimen/margin_medium_3_22"
+            android:layout_marginRight="@dimen/margin_large"
+            android:tint="@color/green"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/tvCinemaLocation"
+            android:id="@+id/tvFacilities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interbold"
+            android:text="@string/lbl_facitilies"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_below="@id/tvFacilities"
+            android:id="@+id/chipFacilities"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="false"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            app:lineSpacing="@dimen/margin_medium_n"
+            android:padding="@dimen/margin_card_medium_n"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/chipFacilities"
+            android:id="@+id/tvSafety"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/interbold"
+            android:text="@string/lbl_safety"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_marginLeft="@dimen/margin_medium_3"/>
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_below="@id/tvSafety"
+            android:id="@+id/chipSafety"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:singleLine="false"
+            android:layout_marginTop="@dimen/margin_card_medium"
+            android:layout_marginHorizontal="@dimen/margin_medium_2"
+            app:lineSpacing="@dimen/margin_medium_n"
+            android:padding="@dimen/margin_card_medium_n"/>
+
+
+    </RelativeLayout>
+
+</ScrollView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_xsmall">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_card_medium">6dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_medium_10">10dp</dimen>
+    <dimen name="margin_medium_12">12dp</dimen>
+    <dimen name="margin_medium_x_13">13dp</dimen>
+    <dimen name="margin_medium_2">16dp</dimen>
+    <dimen name="margin_medium_2_18">18dp</dimen>
+    <dimen name="margin_medium_3">20dp</dimen>
+    <dimen name="margin_medium_3_22">22dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_large_28">28dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_xxlarge">48dp</dimen>
+    <dimen name="margin_xxxlarge">64dp</dimen>
+    <dimen name="margin_xxxxlarge">80dp</dimen>
+
+    <dimen name="margin_small_n">-4dp</dimen>
+    <dimen name="margin_card_small_n">-6dp</dimen>
+    <dimen name="margin_medium_n">-8dp</dimen>
+    <dimen name="margin_card_medium_n">-12dp</dimen>
+    <dimen name="margin_medium_2_n">-16dp</dimen>
+    <dimen name="margin_medium_3_n">-18dp</dimen>
+    <dimen name="margin_large_n">-24dp</dimen>
+    <dimen name="margin_xlarge_n">-32dp</dimen>
+    <dimen name="margin_xxlarge_n">-40dp</dimen>
+    <dimen name="margin_xxlarge_48_n">-48dp</dimen>
+    <dimen name="margin_xxxlarge_n">-64dp</dimen>
+
+    <!-- text size    -->
+    <dimen name="text_smallest">8sp</dimen>
+    <dimen name="text_smallest_9">9sp</dimen>
+    <dimen name="text_smaller">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_regular_2x">16sp</dimen>
+    <dimen name="text_regular_2x_18">18sp</dimen>
+    <dimen name="text_regular_3x">20sp</dimen>
+    <dimen name="text_regular_3x_22">22sp</dimen>
+    <dimen name="text_heading_1x">24sp</dimen>
+    <dimen name="text_heading_2x">32sp</dimen>
+    <dimen name="text_big">40sp</dimen>
+    <dimen name="text_big_2x">60sp</dimen>
+    <dimen name="text_big_3x">80sp</dimen>
+
+    <dimen name="width_splash_logo">160dp</dimen>
+    <dimen name="height_splah_logo">160dp</dimen>
+    <dimen name="margin_top_splash_logo">230dp</dimen>
+    <dimen name="width_splash_title">100dp</dimen>
+
+    <dimen name="height_logging_btn">42dp</dimen>
+    <dimen name="width_logging_logo">130dp</dimen>
+    <dimen name="height_logging_logo">130dp</dimen>
+
+    <dimen name="width_vh_movie">100dp</dimen>
+    <dimen name="width_movie_vh_poster">150dp</dimen>
+    <dimen name="height_movie_vh_poster">250dp</dimen>
+
+    <dimen name="width_md_poster">135dp</dimen>
+    <dimen name="height_md_poster">200dp</dimen>
+    <dimen name="width_md_movie_title">130dp</dimen>
+    <dimen name="height_md_collapsing">380dp</dimen>
+    <dimen name="height_md_video">180dp</dimen>
+    <dimen name="fl_md_play_button">80dp</dimen>
+    <dimen name="width_md_board">120dp</dimen>
+    <dimen name="height_md_board">60dp</dimen>
+
+    <dimen name="width_ccd_toolbar_location">120dp</dimen>
+    <dimen name="height_ccd_show_bar">35dp</dimen>
+    <dimen name="width_vh_date_card">80dp</dimen>
+    <dimen name="heigth_vh_date_card">105dp</dimen>
+    <dimen name="width_vh_time">90dp</dimen>
+    <dimen name="height_vh_time">90dp</dimen>
+
+    <dimen name="width_vh_food_box">150dp</dimen>
+    <dimen name="height_vh_food_box">200dp</dimen>
+    <dimen name="height_food_image">100dp</dimen>
+    <dimen name="width_btn_count">20dp</dimen>
+    <dimen name="height_btn_count">20dp</dimen>
+    <dimen name="height_food_count">40dp</dimen>
+    <dimen name="marigin_40dp">40dp</dimen>
+
+</resources>

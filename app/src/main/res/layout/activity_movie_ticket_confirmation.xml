@@ -1,0 +1,363 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.movie.MovieTicketConfirmationActivity"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:id="@+id/rlScreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/dmsbold"
+            android:text="@string/lbl_ticket_confirmation"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_3x"
+            android:layout_marginTop="@dimen/margin_medium_2"/>
+
+        <RelativeLayout
+            android:id="@+id/rlTicket"
+            android:layout_below="@id/tvheader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/gradient_ticket"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_large"
+            android:paddingBottom="@dimen/margin_large">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivMovie"
+                android:layout_width="95dp"
+                android:layout_height="120dp"
+                android:src="@drawable/blackwidow"
+                android:layout_marginTop="@dimen/margin_medium_2"
+                android:layout_marginLeft="@dimen/margin_large"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_toEndOf="@id/ivMovie"
+                android:id="@+id/tvMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsbold"
+                android:text="@string/movie_name"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/margin_medium_2_18"
+                android:layout_marginLeft="@dimen/margin_xlarge"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMovieDimens"
+                android:layout_below="@id/tvMovieTitle"
+                android:layout_toEndOf="@id/tvCinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsbold"
+                android:text="@string/lbl_checkout_dimens"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/textPrimary"
+                android:layout_marginLeft="@dimen/margin_small"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_toEndOf="@id/tvMovieDimens"
+                android:layout_below="@id/tvMovieTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsbold"
+                android:text="@string/lbl_checkout_reso"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/textPrimary"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_toEndOf="@id/ivMovie"
+                android:layout_below="@id/tvMovieTitle"
+                android:id="@+id/tvCinema"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_vh_cinema_name"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/green"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_xlarge"/>
+
+            <LinearLayout
+                android:layout_below="@id/tvCinema"
+                android:layout_toEndOf="@id/ivMovie"
+                android:id="@+id/llMovieTicket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/margin_xlarge"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvmticket"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsmedium"
+                    android:text="@string/lbl_checkout_m_ticket"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_small" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsmedium"
+                    android:text="@string/lbl_checkout_open"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_small" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvTicketCount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsmedium"
+                    android:text="@string/lbl_checkout_ticket_count"
+                    android:textColor="@color/green"
+                    android:textSize="@dimen/text_small" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsmedium"
+                    android:text="@string/lbl_checkout_close"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="@dimen/text_small" />
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvReceiptSeat"
+                android:layout_toEndOf="@id/ivMovie"
+                android:layout_below="@id/llMovieTicket"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_checkout_ticket_seat"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_xlarge"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_below="@id/llMovieTicket"
+                android:layout_toEndOf="@id/tvReceiptSeat"
+                android:id="@+id/tvCinemaScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_checkout_screen_2"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/textPrimary"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_small"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDivider"
+                android:layout_below="@id/ivMovie"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/dot_divider"
+                android:textColor="@color/textPrimary"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_below="@id/ivMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_circle"
+                android:layout_marginLeft="@dimen/margin_medium_2_n"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_alignParentEnd="true"
+                android:layout_below="@id/ivMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/black_circle"
+                android:layout_marginRight="@dimen/margin_medium_2_n"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+            <LinearLayout
+                android:layout_centerHorizontal="true"
+                android:id="@+id/llMovieTime"
+                android:layout_below="@id/tvDivider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/calendar"
+                        android:layout_gravity="center"
+                        android:paddingBottom="@dimen/margin_medium" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCinemaDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_checkout_movie_date"
+                        android:textSize="@dimen/text_smaller"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:paddingTop="@dimen/margin_xlarge"/>
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/margin_medium_2"
+                    android:layout_weight="2">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/clock"
+                        android:layout_gravity="center"
+                        android:paddingBottom="@dimen/margin_medium"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCinemaTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/lbl_checkout_movie_time"
+                        android:textSize="@dimen/text_smaller"
+                        android:textColor="@color/white"
+                        android:layout_gravity="center"
+                        android:paddingTop="@dimen/margin_xlarge"/>
+
+
+                </FrameLayout>
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_medium_10"
+                    android:layout_weight="3">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/checkoutlocation"
+                        android:layout_gravity="center"
+                        android:paddingBottom="33dp"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCinemaLocation"
+                        android:layout_width="100dp"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/lbl_checkout_movie_location"
+                        android:textSize="@dimen/text_smaller"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:paddingTop="@dimen/margin_xlarge"/>
+
+                </FrameLayout>
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivQRCode"
+            android:layout_below="@id/rlTicket"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@drawable/qrcode"
+            android:layout_marginTop="@dimen/margin_xxxxlarge"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/ivQRCode"
+            android:id="@+id/tvQrnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsbold"
+            android:text="@string/lbl_qrcode_num"
+            android:textSize="@dimen/text_regular"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <LinearLayout
+            android:id="@+id/llQrSpin"
+            android:layout_below="@id/tvQrnum"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_small"
+            android:gravity="center_horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsbold"
+                android:text="@string/lbl_tpin"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/textPrimary" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsbold"
+                android:text="@string/lbl_qrcode_num"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/white"/>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_below="@id/llQrSpin"
+            android:id="@+id/btnDone"
+            android:layout_width="120dp"
+            android:layout_height="@dimen/margin_xlarge"
+            android:text="@string/lbl_done"
+            android:background="@drawable/buttom_order_snack"
+            android:layout_marginTop="@dimen/margin_xlarge"
+            android:layout_centerHorizontal="true"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlEnjoyMovie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#E6000000"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/enjoymovie" />
+
+    </RelativeLayout>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

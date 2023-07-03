@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:name=".ui.MovieBookingApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.MyMovieBookingApp"
+        tools:targetApi="31">
+
+        <!-- Login -->
+        <activity
+            android:name=".ui.activities.login.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activities.login.LoginActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.login.OTPActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.login.RegionActivity"
+            android:exported="true" />
+
+        <!-- Movie -->
+        <activity
+            android:name=".ui.activities.MainActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.movie.MovieDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.movie.MovieCinemaDataAndTimeActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.movie.MovieCinemaSeatActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.movie.MovieSnackActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ui.activities.movie.MovieCheckOutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.movie.MoviePaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.activities.movie.MovieTicketConfirmationActivity"
+            android:exported="false" />
+
+        <!-- Cinema -->
+        <activity
+            android:name=".ui.activities.cinema.CinemaDetailActivity"
+            android:exported="true"></activity>
+
+        <activity
+            android:name=".ui.activities.ticket.TicketDetailActivity"
+            android:exported="true">
+        </activity>
+    </application>
+
+</manifest>

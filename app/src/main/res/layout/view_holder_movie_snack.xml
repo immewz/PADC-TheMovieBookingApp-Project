@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/width_vh_food_box"
+    android:layout_height="@dimen/height_vh_food_box"
+    android:background="@drawable/background_snack_box"
+    android:layout_marginTop="@dimen/margin_medium_2"
+    android:layout_marginLeft="@dimen/margin_medium_2">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="@dimen/margin_large">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivFood"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_food_image"
+            android:src="@drawable/cola"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/ivFood"
+            android:id="@+id/tvFoodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intermedium"
+            android:text="@string/lbl_snack_vh_cocacola_large"
+            android:textSize="@dimen/text_regular"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginLeft="@dimen/margin_medium"/>
+
+        <LinearLayout
+            android:layout_below="@id/tvFoodName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_xsmall"
+            android:layout_marginLeft="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFoodPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intermedium"
+                android:text="1000"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/green"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvFoodks"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intermedium"
+                android:text="@string/lbl_snack_ks"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/green" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnFoodCount"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_large"
+            android:fontFamily="@font/intermedium"
+            android:text="@string/lbl_snack_vh_add"
+            android:textSize="@dimen/text_smaller"
+            android:background="@drawable/buttom_order_snack"
+            android:layout_marginHorizontal="@dimen/margin_medium"
+            android:layout_marginBottom="@dimen/margin_medium" />
+
+        <LinearLayout
+            android:id="@+id/llFoodCount"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical|right"
+            android:layout_marginRight="@dimen/margin_medium_2"
+            android:layout_marginBottom="@dimen/margin_xsmall">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnAdd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/plus"
+                android:layout_marginRight="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvOrderCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lbl_snack_vh_food_count"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_card_small_n"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnSub"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/minus"
+                android:layout_marginLeft="@dimen/margin_medium"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

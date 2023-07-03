@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragments.CinemaFragment"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- App Bar -->
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnBackCinemaView"
+            android:layout_width="@dimen/margin_xxlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:src="@drawable/baseline_chevron_left_white_24dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="fill_vertical" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_toEndOf="@id/btnBackCinemaView"
+            android:id="@+id/btnSearchCinema"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:src="@drawable/baseline_search_white_24dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="fill_vertical"
+            android:layout_marginRight="@dimen/margin_small"/>
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:layout_toEndOf="@id/btnSearchCinema"
+            android:layout_toStartOf="@id/btnCinemaFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_2x"
+            android:hint="@string/lbl_search_the_cinema"
+            android:textColorHint="@color/textPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_alignParentEnd="true"
+            android:id="@+id/btnCinemaFilter"
+            android:layout_width="@dimen/margin_xlarge"
+            android:layout_height="@dimen/margin_xxlarge"
+            android:src="@drawable/baseline_filter_alt_white_24dp"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="fill_vertical"
+            android:layout_marginEnd="@dimen/margin_medium_3"
+            android:layout_marginLeft="@dimen/margin_small"/>
+
+        <RelativeLayout
+            android:id="@+id/rlFilter"
+            android:layout_below="@id/btnSearchCinema"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:visibility="gone">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/spFacilities"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_small"
+                android:layout_marginLeft="@dimen/margin_medium_3"
+                android:background="@drawable/background_spinner"/>
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:layout_toEndOf="@id/spFacilities"
+                android:id="@+id/spFormat"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"
+                android:background="@drawable/background_spinner"/>
+
+            <RelativeLayout
+                android:layout_below="@id/spFacilities"
+                android:id="@+id/rlRangePriceSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_3">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvPriceRange"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/intermedium"
+                    android:text="@string/lbl_price_range"
+                    android:textColor="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_below="@id/tvPriceRange"
+                    android:id="@+id/tvLowPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/interregular"
+                    android:text="3500 Ks"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tvPriceRange"
+                    android:id="@+id/tvHighPrice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/interregular"
+                    android:text="29500 Ks"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+                <com.google.android.material.slider.RangeSlider
+                    android:layout_below="@id/tvLowPrice"
+                    android:id="@+id/rsPrice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="3500.0"
+                    android:valueTo="29500.0"
+                    app:values="@array/initial_slider_values_price"
+                    app:trackColorActive="@color/green"
+                    app:trackColorInactive="@color/colorPrimary"
+                    app:thumbColor="@color/green"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_below="@id/rlRangePriceSlider"
+                android:id="@+id/rlRangeTimeSlider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginTop="@dimen/margin_medium_3">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvShowTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/intermedium"
+                    android:text="@string/lbl_show_times"
+                    android:textColor="@color/white"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_below="@id/tvShowTime"
+                    android:id="@+id/tvStartTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/interregular"
+                    android:text="@string/lbl_8am"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_alignParentEnd="true"
+                    android:layout_below="@id/tvShowTime"
+                    android:id="@+id/tvEndTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/interregular"
+                    android:text="@string/lbl_12pm"
+                    android:textSize="@dimen/text_small"
+                    android:textColor="@color/textPrimary"
+                    android:layout_marginTop="@dimen/margin_medium"/>
+
+                <com.google.android.material.slider.RangeSlider
+                    android:layout_below="@id/tvStartTime"
+                    android:id="@+id/rsTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:valueFrom="8.0"
+                    android:valueTo="12.0"
+                    app:values="@array/initial_slider_values_time"
+                    app:trackColorActive="@color/green"
+                    app:trackColorInactive="@color/colorPrimary"
+                    app:thumbColor="@color/green"/>
+
+            </RelativeLayout>
+
+            <View
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorPrimary"/>
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/rlFilter"
+            android:id="@+id/rvCinemaList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false" />
+
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

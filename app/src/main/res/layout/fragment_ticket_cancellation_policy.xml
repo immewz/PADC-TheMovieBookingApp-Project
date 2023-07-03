@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <RelativeLayout
+        android:layout_width="320dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/border_ticket_cancellation"
+        android:paddingTop="@dimen/margin_xlarge"
+        android:paddingHorizontal="@dimen/margin_medium_3"
+        android:paddingBottom="@dimen/margin_xlarge">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvFirstSentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intermedium"
+            android:text="@string/lbl_ticket_cancelation_policy"
+            android:textColor="@color/white"/>
+
+        <LinearLayout
+            android:layout_below="@id/tvFirstSentence"
+            android:id="@+id/llSecondSentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:src="@drawable/food"
+                android:tint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intermedium"
+                android:text="@string/lbl_100_refund_on_f_b"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@id/llSecondSentence"
+            android:id="@+id/llThirdSentence"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_width="@dimen/margin_large"
+                android:layout_height="@dimen/margin_large"
+                android:src="@drawable/ticket45"
+                android:tint="@color/white"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/intermedium"
+                android:text="@string/lbl_up_to_75_refund_for_tickets"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_regular"
+                android:layout_marginLeft="@dimen/margin_medium"
+                android:layout_marginTop="@dimen/margin_small"/>
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/llThirdSentence"
+            android:id="@+id/tvFouthSentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intermedium"
+            android:text="@string/lbl_75_refund_until_2_hours_before_nshow_start_time"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_large"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/tvFouthSentence"
+            android:id="@+id/tvFifthSentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intermedium"
+            android:text="@string/lbl_50_refund_between_2_hours_and_20_nminutes_before_show_start_time"
+            android:textColor="@color/textPrimary"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="@dimen/margin_medium_2"
+            android:layout_marginLeft="@dimen/margin_large"/>
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSixthSentence"
+            android:layout_below="@id/tvFifthSentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intermedium"
+            android:text="@string/lbl_1_refund_not_available_for_convenience_n_fees_vouchers_gift_cards_taxes_etc"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="@dimen/margin_xlarge"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSeventhSentence"
+            android:layout_below="@id/tvSixthSentence"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/intermedium"
+            android:text="@string/lbl_2_no_cancelation_within_20minute_of_n_show_start_time"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_small"
+            android:layout_marginTop="@dimen/margin_large"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_below="@id/tvSeventhSentence"
+            android:id="@+id/btnClose"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="@string/btn_close"
+            android:background="@drawable/background_close_botton"
+            android:layout_marginTop="@dimen/margin_large" />
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

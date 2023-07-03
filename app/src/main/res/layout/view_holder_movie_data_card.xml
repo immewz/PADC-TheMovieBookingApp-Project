@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="@dimen/margin_medium_2">
+
+    <FrameLayout
+        android:id="@+id/flDateCard"
+        android:layout_width="@dimen/width_vh_date_card"
+        android:layout_height="@dimen/heigth_vh_date_card"
+        android:backgroundTint="@color/green">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivDateCard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bg"
+            android:src="@drawable/datecard"
+            android:scaleType="centerCrop"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_3_22">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="@dimen/margin_medium"
+                android:fontFamily="@font/interbold"
+                android:gravity="center"
+                android:text="@string/lbl_date_card_day"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_regular" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMonth"
+                android:layout_below="@+id/tvDay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/interbold"
+                android:text="@string/lbl_date_card_month"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:elevation="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvDate"
+                android:layout_below="@+id/tvMonth"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/interbold"
+                android:text="@string/lbl_date_card_day_num"
+                android:textSize="@dimen/text_regular_2x"
+                android:textColor="@color/black"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/margin_small"
+                android:elevation="@dimen/margin_medium"/>
+
+        </RelativeLayout>
+
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

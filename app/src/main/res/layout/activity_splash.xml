@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activities.login.SplashActivity"
+    android:background="@color/bg">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivCinemaLogo"
+            android:layout_width="@dimen/width_splash_logo"
+            android:layout_height="@dimen/height_splah_logo"
+            android:src="@drawable/logo"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_top_splash_logo"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_below="@+id/ivCinemaLogo"
+            android:id="@+id/ivCinemaTitle"
+            android:layout_width="@dimen/width_splash_title"
+            android:layout_height="@dimen/margin_xlarge"
+            android:src="@drawable/title"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_small"/>
+
+        <ProgressBar
+            android:layout_below="@id/ivCinemaTitle"
+            android:id="@+id/pbCinemaLoading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?attr/progressBarStyle"
+            android:indeterminateTint="@color/green"
+            android:layout_marginTop="@dimen/margin_xxxxlarge"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
