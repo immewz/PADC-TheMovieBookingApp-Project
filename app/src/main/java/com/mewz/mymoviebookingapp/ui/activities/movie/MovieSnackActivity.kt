@@ -150,7 +150,7 @@ class MovieSnackActivity : AppCompatActivity(), SnackViewHolderDelegate, java.io
         })
     }
 
-        private fun checkoutActivity(){
+    private fun checkoutActivity(){
         mMovieBookingModel.getSnackByCategoryId(
             authorization = "Bearer ${mMovieBookingModel.getToken(201)?.token}",
             categoryId = "",
