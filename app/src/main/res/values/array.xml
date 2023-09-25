@@ -1,42 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string-array name="facilities">
+    <array name="spinner_facilities">
         <item>Facilities</item>
         <item>Parking</item>
         <item>Online Food</item>
         <item>Wheel Chair</item>
-    </string-array>
+        <item>Ticket Cancellation</item>
+    </array>
 
-    <string-array name="format">
+    <array name="spinner_format">
         <item>Format</item>
         <item>Format1</item>
         <item>Format2</item>
         <item>Format3</item>
-    </string-array>
+        <item>Format4</item>
+    </array>
 
-    <string-array name="genres">
-        <item>Genres</item>
-        <item>Action</item>
-        <item>Drama</item>
-        <item>Comedy</item>
-    </string-array>
 
-    <string-array name="month">
-        <item>Month</item>
-        <item>June</item>
-        <item>July</item>
-        <item>Aug</item>
-    </string-array>
-
-    <integer-array name="initial_slider_values_price">
+    <array name="initial_slider_values_price">
         <item>3500</item>
         <item>29500</item>
-    </integer-array>
+    </array>
 
-    <integer-array name="initial_slider_values_time">
+    <array name="initial_slider_values_time">
         <item>8</item>
-        <item>12</item>
-    </integer-array>
+        <item>24</item>
+    </array>
 
 </resources>

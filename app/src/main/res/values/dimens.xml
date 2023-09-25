@@ -47,41 +47,40 @@
     <dimen name="text_big_2x">60sp</dimen>
     <dimen name="text_big_3x">80sp</dimen>
 
-    <dimen name="width_splash_logo">160dp</dimen>
-    <dimen name="height_splah_logo">160dp</dimen>
-    <dimen name="margin_top_splash_logo">230dp</dimen>
-    <dimen name="width_splash_title">100dp</dimen>
-
-    <dimen name="height_logging_btn">42dp</dimen>
-    <dimen name="width_logging_logo">130dp</dimen>
-    <dimen name="height_logging_logo">130dp</dimen>
-
-    <dimen name="width_vh_movie">100dp</dimen>
-    <dimen name="width_movie_vh_poster">150dp</dimen>
-    <dimen name="height_movie_vh_poster">250dp</dimen>
-
-    <dimen name="width_md_poster">135dp</dimen>
-    <dimen name="height_md_poster">200dp</dimen>
-    <dimen name="width_md_movie_title">130dp</dimen>
-    <dimen name="height_md_collapsing">380dp</dimen>
-    <dimen name="height_md_video">180dp</dimen>
-    <dimen name="fl_md_play_button">80dp</dimen>
-    <dimen name="width_md_board">120dp</dimen>
-    <dimen name="height_md_board">60dp</dimen>
-
-    <dimen name="width_ccd_toolbar_location">120dp</dimen>
-    <dimen name="height_ccd_show_bar">35dp</dimen>
-    <dimen name="width_vh_date_card">80dp</dimen>
-    <dimen name="heigth_vh_date_card">105dp</dimen>
-    <dimen name="width_vh_time">90dp</dimen>
-    <dimen name="height_vh_time">90dp</dimen>
-
-    <dimen name="width_vh_food_box">150dp</dimen>
-    <dimen name="height_vh_food_box">200dp</dimen>
-    <dimen name="height_food_image">100dp</dimen>
-    <dimen name="width_btn_count">20dp</dimen>
-    <dimen name="height_btn_count">20dp</dimen>
-    <dimen name="height_food_count">40dp</dimen>
-    <dimen name="marigin_40dp">40dp</dimen>
+    <dimen name="width_logo">124dp</dimen>
+    <dimen name="height_logo">150dp</dimen>
+    <dimen name="margin_90dp">90dp</dimen>
+    <dimen name="margin_82dp">82dp</dimen>
+    <dimen name="margin_100dp">100dp</dimen>
+    <dimen name="margin_70dp">70dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_36dp">36dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_220dp">220dp</dimen>
+    <dimen name="margin_200dp">200dp</dimen>
+    <dimen name="margin_190dp">190dp</dimen>
+    <dimen name="margin_270dp">270dp</dimen>
+    <dimen name="margin_370dp">370dp</dimen>
+    <dimen name="margin_170dp">170dp</dimen>
+    <dimen name="margin_55dp">55dp</dimen>
+    <dimen name="margin_230dp">230dp</dimen>
+    <dimen name="margin_380dp">380dp</dimen>
+    <dimen name="margin_140dp">140dp</dimen>
+    <dimen name="margin_175dp">175dp</dimen>
+    <dimen name="margin_37dp">37dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_250dp">250dp</dimen>
+    <dimen name="margin_38dp">38dp</dimen>
+    <dimen name="margin_110dp">110dp</dimen>
+    <dimen name="margin_320dp">320dp</dimen>
+    <dimen name="margin_462dp">462dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="margin_130dp">130dp</dimen>
+    <dimen name="margin_150dp">150dp</dimen>
+    <dimen name="margin_96dp">96dp</dimen>
+    <dimen name="margin_120dp">120dp</dimen>
+    <dimen name="margin_93dp">93dp</dimen>
+    <dimen name="margin_240dp">240dp</dimen>
 
 </resources>

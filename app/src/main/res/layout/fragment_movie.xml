@@ -4,169 +4,171 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.fragments.MovieFragment"
-    android:background="@color/bg">
+    tools:context=".fragments.MovieFragment"
+    android:background="@color/background">
 
-    <!-- App Bar -->
-    <com.google.android.material.appbar.AppBarLayout
-        android:id="@+id/appBar"
-        android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="@color/black">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolBar"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginHorizontal="@dimen/margin_medium_2">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivLocation"
-                    android:layout_width="@dimen/margin_medium_2_18"
-                    android:layout_height="@dimen/margin_medium_2_18"
-                    android:src="@drawable/location_vector"
-                    android:layout_marginTop="@dimen/margin_medium_3_22"
-                    android:layout_marginLeft="@dimen/margin_medium"/>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvLocation"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/interregular"
-                    android:textStyle="italic|bold"
-                    android:text="@string/movie_yangon"
-                    android:textSize="@dimen/text_regular_2x"
-                    android:textColor="@color/white"
-                    android:layout_toEndOf="@id/ivLocation"
-                    android:layout_marginTop="@dimen/margin_medium_2_18"
-                    android:layout_marginLeft="@dimen/margin_card_medium"/>
-
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnScan"
-                    android:layout_width="@dimen/margin_large"
-                    android:layout_height="@dimen/margin_large"
-                    android:src="@drawable/scanning"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginTop="@dimen/margin_medium_3"
-                    android:layout_marginRight="@dimen/margin_medium_2"
-                    android:background="@null"/>
-
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnNotification"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_notifications_white_24dp"
-                    android:layout_toStartOf="@id/btnScan"
-                    android:layout_marginTop="@dimen/margin_medium_3"
-                    android:layout_marginRight="@dimen/margin_xlarge"
-                    android:background="@null"/>
-
-                <androidx.appcompat.widget.AppCompatImageButton
-                    android:id="@+id/btnSearch"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_search_white_24dp"
-                    android:layout_toStartOf="@id/btnNotification"
-                    android:layout_marginTop="@dimen/margin_medium_3"
-                    android:layout_marginRight="@dimen/margin_xlarge"
-                    android:background="@null"/>
-
-            </RelativeLayout>
-
-        </androidx.appcompat.widget.Toolbar>
-
-    </com.google.android.material.appbar.AppBarLayout>
-
-    <!-- Body -->
-    <androidx.core.widget.NestedScrollView
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
-        <RelativeLayout
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background">
 
-            <!-- Banner -->
-            <androidx.viewpager2.widget.ViewPager2
-                android:id="@+id/viewPagerBanner"
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium_2"
-                android:clipToPadding="true"
-                android:layout_marginHorizontal="@dimen/margin_card_medium"/>
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
 
-            <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-                android:layout_centerHorizontal="true"
-                android:layout_below="@id/viewPagerBanner"
-                android:id="@+id/dotsIndicatorBanner"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="bottom|center"
-                android:elevation="@dimen/margin_medium"
-                android:layout_marginBottom="@dimen/margin_medium"
-                app:dotsColor="@android:color/darker_gray"
-                app:dotsCornerRadius="@dimen/margin_small"
-                app:dotsSize="@dimen/margin_medium"
-                app:dotsSpacing="@dimen/margin_small"
-                app:dotsWidthFactor="1.0"
-                app:selectedDotColor="@color/green"
-                app:progressMode="false"
-                android:layout_marginTop="@dimen/margin_medium"/>
+                <FrameLayout
+                    android:id="@+id/flLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="@dimen/margin_large">
 
-            <!-- Body -->
-            <!-- Tab Layout  -->
-            <FrameLayout
-                android:id="@+id/flTab"
-                android:layout_below="@id/dotsIndicatorBanner"
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/location_main"
+                            android:layout_margin="@dimen/margin_small"
+                            android:paddingEnd="@dimen/margin_card_medium"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_main_location"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_regular_2x"
+                            android:textStyle="italic"
+                            android:paddingEnd="@dimen/margin_card_medium"/>
+
+                    </LinearLayout>
+
+                </FrameLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_toStartOf="@id/btnNotification"
+                        android:id="@+id/btnSearchMovie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_search_green_24dp"
+                        android:tint="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_large"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_toStartOf="@id/btnScan"
+                        android:id="@+id/btnNotification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/baseline_notifications_white_24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_small"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnScan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/sacn_main"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium">
+
+            <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_medium"
-                android:layout_marginHorizontal="@dimen/margin_medium_3">
+                android:layout_height="match_parent"
+                android:clipChildren="false"
+                android:clipToPadding="false">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerBanner"
+                    android:layout_width="@dimen/margin_370dp"
+                    android:layout_height="@dimen/margin_170dp"
+                    android:layout_centerHorizontal="true" />
+                
+                <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+                    android:layout_below="@id/viewPagerBanner"
+                    android:id="@+id/dotsIndicator"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:dotsColor="@color/colorDotIndicator"
+                    app:dotsCornerRadius="8dp"
+                    app:dotsSize="@dimen/margin_medium"
+                    app:dotsSpacing="4dp"
+                    app:dotsWidthFactor="1.0"
+                    app:selectedDotColor="@color/colorAccent"
+                    app:progressMode="false"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginVertical="@dimen/margin_medium_2"/>
 
                 <com.google.android.material.tabs.TabLayout
-                    android:id="@+id/tabLayoutMovie"
+                    android:layout_below="@id/dotsIndicator"
+                    android:id="@+id/tabLayoutShowingOrComing"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/margin_xxlarge"
-                    android:layout_margin="6dp"
-                    android:background="@drawable/gradient_tab"
-                    app:tabBackground="@drawable/gradient_tab_item"
-                    app:tabIndicator="@drawable/gradient_tab_item"
+                    android:layout_height="@dimen/margin_55dp"
+                    app:tabBackground="@drawable/background_tab_item"
+                    android:background="@drawable/background_tablayout_movie"
                     app:tabMode="fixed"
-                    app:tabRippleColor="@android:color/transparent"
-                    app:tabSelectedTextColor="@color/textPrimary"
-                    app:tabTextColor="@color/textSecondary"/>
+                    app:tabTextColor="@color/colorTextSecondary"
+                    app:tabTextAppearance="@style/TabLayoutTextStyle"
+                    app:tabSelectedTextColor="@color/colorTextTab"
+                    android:layout_marginTop="@dimen/margin_medium_10"
+                    android:layout_marginHorizontal="@dimen/margin_large"/>
 
-            </FrameLayout>
+                <include
+                    android:id="@+id/vpNowShowingMovieList"
+                    layout="@layout/viewpod_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tabLayoutShowingOrComing"
+                    android:layout_marginHorizontal="@dimen/margin_large"
+                    android:layout_marginVertical="@dimen/margin_large" />
 
-            <!-- Movie List  -->
-            <include
-                android:layout_below="@id/flTab"
-                android:id="@+id/vpNowShowingMovieList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                layout="@layout/view_pod_movie_list"
-                android:layout_marginVertical="@dimen/margin_medium_2"
-                android:layout_marginHorizontal="@dimen/margin_medium_2" />
-
-            <include
-                android:layout_below="@id/flTab"
-                android:id="@+id/vpComingSoonMovieList"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                layout="@layout/view_pod_movie_list"
-                android:layout_marginVertical="@dimen/margin_medium_2"
-                android:layout_marginHorizontal="@dimen/margin_medium_2"
-                android:visibility="gone"/>
-
-
-        </RelativeLayout>
+                <include
+                    android:id="@+id/vpComingSoonMovieList"
+                    layout="@layout/viewpod_movie"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tabLayoutShowingOrComing"
+                    android:layout_marginHorizontal="@dimen/margin_large"
+                    android:layout_marginVertical="@dimen/margin_large"
+                    android:visibility="gone"/>
 
 
-    </androidx.core.widget.NestedScrollView>
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

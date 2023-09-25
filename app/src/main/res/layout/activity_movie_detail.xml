@@ -4,156 +4,227 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.activities.movie.MovieDetailActivity"
-    android:background="@color/bg">
+    tools:context=".activities.movies.MovieDetailActivity"
+    android:background="@color/background">
 
-    <!-- Collapsing-->
     <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
         <com.google.android.material.appbar.CollapsingToolbarLayout
-            android:id="@+id/collapsingTitle"
+            android:id="@+id/collapsingToolbar"
             android:layout_width="match_parent"
-            android:layout_height="@dimen/height_md_collapsing"
+            android:layout_height="wrap_content"
             app:layout_scrollFlags="scroll|exitUntilCollapsed"
             app:contentScrim="@color/black"
             app:collapsedTitleTextColor="@color/white"
             app:expandedTitleTextColor="@android:color/transparent"
-            app:title="@string/movie_name"
-            android:background="@color/bg"
-            android:paddingBottom="@dimen/margin_medium_2">
-
-            <FrameLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:elevation="@dimen/margin_medium_2">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/btnBack"
-                    android:layout_width="@dimen/margin_xlarge"
-                    android:layout_height="@dimen/margin_xlarge"
-                    android:src="@drawable/baseline_chevron_left_white_24dp"
-                    android:layout_marginStart="@dimen/margin_medium"
-                    android:layout_marginTop="@dimen/margin_medium_2"/>
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/btnShare"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_share_white_24dp"
-                    android:layout_gravity="end"
-                    android:layout_marginEnd="@dimen/margin_medium_2"
-                    android:layout_marginTop="@dimen/margin_medium_2_18"/>
-
-            </FrameLayout>
-
-            <FrameLayout
-                android:id="@+id/btnPlayOrPause"
-                android:layout_width="@dimen/margin_xlarge"
-                android:layout_height="@dimen/margin_xlarge"
-                android:elevation="@dimen/margin_medium"
-                android:background="@drawable/background_play_button"
-                android:layout_gravity="center"
-                android:layout_marginBottom="@dimen/fl_md_play_button">
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivPlay"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_play_arrow_white_24dp"
-                    android:layout_gravity="center"/>
-
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:id="@+id/ivPause"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:src="@drawable/baseline_pause_circle_outline_white_24dp"
-                    android:layout_gravity="center"
-                    android:visibility="gone"/>
-
-            </FrameLayout>
+            app:title="Black Widow"
+            android:background="@color/background">
 
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
-                <!--  Video View  -->
-                <VideoView
-                    android:id="@+id/vvMovieTrailer"
+                <FrameLayout
+                    android:id="@+id/flMovieTrailer"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/height_md_video"
-                    android:saveEnabled="true" />
+                    android:layout_height="@dimen/margin_230dp">
 
-                <!--  Movie Title And Resolution -->
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_below="@id/vvMovieTrailer"
-                    android:id="@+id/ivMovie"
-                    android:layout_width="@dimen/width_md_poster"
-                    android:layout_height="@dimen/height_md_poster"
-                    android:background="@drawable/blackwidow"
-                    android:layout_marginLeft="@dimen/margin_medium_2_18"
-                    android:layout_marginTop="@dimen/margin_medium_2_n"/>
+                    <VideoView
+                        android:id="@+id/vvMovieTrailer"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:saveEnabled="true"/>
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_below="@id/vvMovieTrailer"
-                    android:layout_toEndOf="@id/ivMovie"
-                    android:id="@+id/tvMovieTitle"
-                    android:layout_width="@dimen/width_md_movie_title"
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                        android:id="@+id/btnPlayMovieTrailer"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:src="@drawable/cinema_play"
+                        app:tint="@color/white"
+                        android:backgroundTint="@color/colorPlayButton"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnBackMovieDetailScreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/back"
+                        android:layout_marginStart="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_medium_3" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnShare"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/share"
+                        android:elevation="@dimen/margin_medium"
+                        android:layout_marginEnd="@dimen/margin_large"
+                        android:layout_marginTop="@dimen/margin_medium_3"
+                        android:layout_gravity="end"/>
+
+                </FrameLayout>
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_below="@id/flMovieTrailer"
+                    android:id="@+id/mcvMoviePoster"
+                    android:layout_width="@dimen/margin_140dp"
+                    android:layout_height="@dimen/margin_175dp"
+                    app:cardCornerRadius="@dimen/margin_small"
+                    android:layout_marginTop="@dimen/margin_large_n"
+                    android:layout_marginStart="@dimen/margin_medium_3"
+                    android:elevation="@dimen/margin_medium"
+                    android:backgroundTint="@android:color/transparent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/ivMoviePoster"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/poster"
+                        android:scaleType="centerCrop"/>
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+                <LinearLayout
+                    android:layout_below="@id/flMovieTrailer"
+                    android:layout_toEndOf="@id/mcvMoviePoster"
+                    android:id="@+id/llMovieInfo"
+                    android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/interbold"
-                    android:text="@string/movie_name"
-                    android:textSize="@dimen/text_regular_2x"
-                    android:textColor="@color/white"
-                    android:layout_marginLeft="@dimen/margin_medium_3"
-                    android:layout_marginTop="@dimen/margin_medium_12"/>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_below="@id/vvMovieTrailer"
-                    android:layout_toStartOf="@id/ivImdv"
-                    android:id="@+id/tvRateScore"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/dmsbolditalic"
-                    android:text="@string/movie_imdb_score"
-                    android:textSize="@dimen/text_regular_2x_18"
-                    android:textColor="@color/white"
+                    android:orientation="vertical"
                     android:layout_marginTop="@dimen/margin_medium_12"
-                    android:layout_marginRight="@dimen/margin_xsmall"/>
+                    android:layout_marginStart="@dimen/margin_medium_3"
+                    android:layout_marginEnd="@dimen/margin_medium">
 
-                <androidx.appcompat.widget.AppCompatImageView
-                    android:layout_below="@id/vvMovieTrailer"
-                    android:layout_alignParentEnd="true"
-                    android:id="@+id/ivImdv"
-                    android:layout_width="45dp"
-                    android:layout_height="28dp"
-                    android:src="@drawable/imdb"
-                    android:layout_marginTop="@dimen/margin_medium"
-                    android:layout_marginRight="@dimen/margin_xxlarge"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
 
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_below="@id/tvMovieTitle"
-                    android:layout_toEndOf="@id/ivMovie"
-                    android:id="@+id/tvMovieResolution"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/intermedium"
-                    android:text="@string/movie_resolution"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="@dimen/margin_small"
-                    android:layout_marginHorizontal="@dimen/margin_medium_3"/>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMovieName"
+                            android:layout_width="@dimen/margin_150dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_name"
+                            android:textSize="@dimen/text_regular_2x"
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="@dimen/margin_card_medium"/>
 
-                <com.google.android.material.chip.ChipGroup
-                    android:layout_below="@id/tvMovieResolution"
-                    android:layout_toEndOf="@id/ivMovie"
-                    android:id="@+id/chipGenre"
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_toEndOf="@id/tvMovieName"
+                            android:id="@+id/ivImdb"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/movie_imdb"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_toEndOf="@id/ivImdb"
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_rating"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_regular_2x"
+                            android:textStyle="italic" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/margin_medium_12">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvMovieDimension"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_dimension"
+                            android:textSize="@dimen/text_regular"
+                            android:textColor="@color/white"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_below="@id/llMovieInfo"
+                    android:layout_toEndOf="@id/mcvMoviePoster"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:singleLine="false"
-                    android:layout_marginTop="@dimen/margin_card_medium"
-                    android:layout_marginHorizontal="@dimen/margin_medium_2"
-                    app:lineSpacing="@dimen/margin_medium_n"
-                    android:padding="@dimen/margin_card_medium_n"/>
+                    android:layout_marginTop="@dimen/margin_medium_10"
+                    android:layout_marginStart="@dimen/margin_medium_3">
+
+                    <com.google.android.material.chip.ChipGroup
+                        android:id="@+id/chipGpGenre"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipGenreOne"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:backgroundTint="@color/colorAccent"
+                            android:elevation="@dimen/margin_medium_2"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small"
+                            tools:text="Action" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipGenreTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:backgroundTint="@color/colorAccent"
+                            android:elevation="@dimen/margin_medium_2"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small"
+                            tools:text="Adventure" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipGenreThree"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:backgroundTint="@color/colorAccent"
+                            android:elevation="@dimen/margin_medium_2"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small"
+                            tools:text="Drama" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipGenreFour"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:backgroundTint="@color/colorAccent"
+                            android:elevation="@dimen/margin_medium_2"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small"
+                            tools:text="Animation" />
+
+                        <com.google.android.material.chip.Chip
+                            android:id="@+id/chipGenreFive"
+                            android:layout_width="wrap_content"
+                            android:layout_height="@dimen/margin_40dp"
+                            android:backgroundTint="@color/colorAccent"
+                            android:elevation="@dimen/margin_medium_2"
+                            android:fontFamily="@font/inter_medium"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/text_small"
+                            tools:text="Comedy" />
+
+                    </com.google.android.material.chip.ChipGroup>
+
+
+                </RelativeLayout>
 
             </RelativeLayout>
 
@@ -166,270 +237,253 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <!-- Body -->
     <androidx.core.widget.NestedScrollView
+        android:layout_below="@id/appBar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
         app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/margin_xxxlarge">
+            android:layout_marginHorizontal="@dimen/margin_medium_3">
 
             <LinearLayout
-                android:id="@+id/llForNotificationBoard"
+                android:id="@+id/llForShortView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
 
-                <!-- Censor, ReleaseDate and Duration     -->
                 <LinearLayout
-                    android:id="@+id/llSmallBoard"
+                    android:id="@+id/llCRD"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal"
-                    android:background="@color/white"
-                    android:layout_marginTop="@dimen/margin_xlarge"
-                    android:layout_marginHorizontal="@dimen/margin_medium_2"
-                    android:backgroundTint="@color/bg">
+                    android:layout_weight="3">
 
-                    <!-- Censor -->
-                    <FrameLayout
-                        android:layout_width="@dimen/width_md_board"
-                        android:layout_height="@dimen/height_md_board"
-                        android:background="@drawable/background_md_small_board">
-
-                        <androidx.appcompat.widget.AppCompatTextView
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content"
-                            android:fontFamily="@font/interbold"
-                            android:text="@string/lbl_md_censor_rating"
-                            android:textSize="@dimen/text_regular"
-                            android:textColor="@color/white"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/margin_card_medium"/>
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_crd"
+                        android:paddingHorizontal="@dimen/margin_medium_10"
+                        android:paddingVertical="@dimen/margin_medium"
+                        android:layout_weight="1">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvCensor"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/interbold"
-                            android:text="@string/movie_censor"
-                            android:textSize="@dimen/text_regular"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_censor_rating"
+                            android:textSize="@dimen/text_small"
                             android:textColor="@color/white"
-                            android:layout_gravity="bottom|center_horizontal"
-                            android:layout_marginBottom="@dimen/margin_card_medium"/>
-
-                    </FrameLayout>
-
-                    <!-- Release Data -->
-                    <FrameLayout
-                        android:layout_width="@dimen/width_md_board"
-                        android:layout_height="@dimen/height_md_board"
-                        android:background="@drawable/background_md_small_board"
-                        android:layout_marginHorizontal="@dimen/margin_medium_12">
+                            android:layout_centerHorizontal="true"/>
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@id/tvCensor"
+                            android:id="@+id/tvCensorRating"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/interbold"
-                            android:text="@string/lbl_md_releasedate"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_censor"
                             android:textSize="@dimen/text_regular"
                             android:textColor="@color/white"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/margin_card_medium"/>
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_centerHorizontal="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_crd"
+                        android:paddingHorizontal="@dimen/margin_medium_10"
+                        android:paddingVertical="@dimen/margin_medium"
+                        android:layout_marginHorizontal="@dimen/margin_medium"
+                        android:layout_weight="1">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvReleaseDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/interbold"
-                            android:text="@string/lbl_md_release_date"
-                            android:textSize="@dimen/text_regular"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_release_date"
+                            android:textSize="@dimen/text_small"
                             android:textColor="@color/white"
-                            android:layout_gravity="bottom|center_horizontal"
-                            android:layout_marginBottom="@dimen/margin_card_medium"/>
-
-                    </FrameLayout>
-
-                    <!-- Duration -->
-                    <FrameLayout
-                        android:layout_width="@dimen/width_md_board"
-                        android:layout_height="@dimen/height_md_board"
-                        android:background="@drawable/background_md_small_board">
+                            android:layout_centerHorizontal="true"/>
 
                         <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@id/tvReleaseDate"
+                            android:id="@+id/tvDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/interbold"
-                            android:text="@string/lbl_md_duration"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_date"
                             android:textSize="@dimen/text_regular"
                             android:textColor="@color/white"
-                            android:layout_gravity="center_horizontal"
-                            android:layout_marginTop="@dimen/margin_card_medium"/>
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_centerHorizontal="true"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_crd"
+                        android:paddingHorizontal="@dimen/margin_medium_10"
+                        android:paddingVertical="@dimen/margin_medium"
+                        android:layout_weight="1">
 
                         <androidx.appcompat.widget.AppCompatTextView
                             android:id="@+id/tvDuration"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:fontFamily="@font/interbold"
-                            android:text="@string/lbl_md_duration_time"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_duration"
+                            android:textSize="@dimen/text_small"
+                            android:textColor="@color/white"
+                            android:layout_centerHorizontal="true"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@id/tvDuration"
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_time"
                             android:textSize="@dimen/text_regular"
                             android:textColor="@color/white"
-                            android:layout_gravity="bottom|center_horizontal"
-                            android:layout_marginBottom="@dimen/margin_card_medium"/>
+                            android:layout_marginTop="@dimen/margin_medium"
+                            android:layout_centerHorizontal="true"/>
 
-                    </FrameLayout>
-
+                    </RelativeLayout>
 
                 </LinearLayout>
 
-                <!-- Release Notification Board -->
-                <RelativeLayout
-                    android:id="@+id/rlReleasingNoti"
-                    android:layout_centerHorizontal="true"
+                <FrameLayout
+                    android:layout_below="@id/llCRD"
+                    android:id="@+id/flNotiReleaseBoard"
                     android:layout_width="match_parent"
-                    android:layout_height="140dp"
-                    android:layout_marginTop="@dimen/margin_xxlarge"
-                    android:layout_marginHorizontal="@dimen/margin_medium_3"
-                    android:elevation="@dimen/margin_medium_3">
+                    android:layout_height="154dp"
+                    android:background="@drawable/background_noti_release"
+                    android:elevation="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_xlarge"
+                    android:visibility="visible">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/tvReleaseDay"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/interbold"
-                        android:textSize="@dimen/text_regular"
-                        android:text="@string/lbl_md_releasing_day_board"
-                        android:textColor="@color/white"
-                        android:elevation="@dimen/margin_large"
-                        android:layout_marginTop="@dimen/margin_medium_2_18"
-                        android:layout_marginLeft="@dimen/margin_medium_12"/>
-
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:layout_below="@id/tvReleaseDay"
-                        android:id="@+id/tvReleaseNoti"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/intermedium"
-                        android:text="@string/lbl_md_notification_alarm"
-                        android:textSize="@dimen/text_smaller"
-                        android:elevation="@dimen/margin_large"
-                        android:textColor="@color/textSecondary"
-                        android:layout_marginTop="@dimen/margin_medium_10"
-                        android:layout_marginLeft="@dimen/margin_medium_12"/>
-
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_below="@id/tvReleaseNoti"
-                        android:id="@+id/btnNoti"
-                        android:layout_width="wrap_content"
-                        android:layout_height="@dimen/margin_xxlarge"
-                        android:src="@drawable/btnoti"
-                        android:elevation="@dimen/margin_large"
-                        android:layout_marginTop="@dimen/margin_medium_10"
-                        android:layout_marginLeft="@dimen/margin_medium_12"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/message"
-                        android:elevation="@dimen/margin_large"
-                        android:layout_alignParentEnd="true"
-                        android:layout_marginTop="@dimen/margin_medium_x_13"
-                        android:layout_marginEnd="@dimen/margin_xxlarge"/>
-
-                    <androidx.appcompat.widget.AppCompatImageView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:src="@drawable/human"
-                        android:elevation="@dimen/margin_large"
-                        android:layout_alignParentEnd="true"
-                        android:layout_alignParentBottom="true"
-                        android:layout_marginRight="@dimen/margin_large"
-                        android:layout_marginBottom="@dimen/margin_medium_x_13"/>
-
-                    <View
+                    <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@drawable/gradient_releasing_notification_board"/>
+                        android:layout_marginVertical="@dimen/margin_medium_2"
+                        android:layout_marginHorizontal="@dimen/margin_medium_2">
 
-                </RelativeLayout>
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvNotiReleaseDay"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_movie_detail_noti_release_day"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_regular_2x"/>
 
-                <!-- Movie Review  -->
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_below="@id/tvNotiReleaseDay"
+                            android:id="@+id/tvNotiMessage"
+                            android:layout_width="@dimen/margin_200dp"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_semibold"
+                            android:text="@string/lbl_movie_detail_noti_message"
+                            android:textColor="@color/colorNotiBoardText"
+                            android:textSize="@dimen/text_small"
+                            android:layout_marginTop="@dimen/margin_medium"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/btnNotification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/button_notifiction"
+                            android:scaleType="centerCrop"
+                            android:layout_alignParentBottom="true"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/ivNotiMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/noti_message"
+                            android:layout_marginEnd="@dimen/margin_xxlarge"
+                            android:layout_alignParentEnd="true"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_below="@id/ivNotiMessage"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/human"
+                            android:layout_marginEnd="@dimen/margin_medium"
+                            android:layout_alignParentEnd="true"/>
+
+
+                    </RelativeLayout>
+
+                </FrameLayout>
+
                 <androidx.appcompat.widget.AppCompatTextView
-                    android:id="@+id/tvStoryline"
+                    android:id="@+id/tvStoryLine"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@font/interbold"
-                    android:text="@string/lbl_md_story_line"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_movie_detail_story_line"
                     android:textSize="@dimen/text_regular"
                     android:textColor="@color/white"
-                    android:layout_marginTop="@dimen/margin_xxlarge"
-                    android:layout_marginLeft="@dimen/margin_medium_2_18"
-                    android:elevation="@dimen/margin_medium"/>
-
-                <androidx.appcompat.widget.AppCompatTextView
-                    android:layout_below="@id/tvStoryline"
-                    android:id="@+id/tvDescription"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/interregular"
-                    android:text="@string/lbl_md_storyline_description"
-                    android:textSize="@dimen/text_small"
-                    android:textColor="@color/white"
-                    android:layout_marginTop="@dimen/margin_medium_10"
-                    android:layout_marginLeft="@dimen/margin_medium_2_18"
-                    android:layout_marginRight="@dimen/margin_medium_2_18"
-                    android:elevation="@dimen/margin_medium"/>
+                    android:layout_marginTop="@dimen/margin_xlarge"/>
 
             </LinearLayout>
 
-            <!-- Cast  -->
             <androidx.appcompat.widget.AppCompatTextView
-                android:layout_below="@id/llForNotificationBoard"
+                android:layout_below="@id/llForShortView"
+                android:id="@+id/tvMovieOverView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="@string/lbl_movie_detail_over_view"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular"
+                android:layout_marginTop="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_below="@id/tvMovieOverView"
                 android:id="@+id/tvCast"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/interbold"
-                android:text="@string/lbl_md_cast"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/lbl_movie_detail_cast"
                 android:textSize="@dimen/text_regular"
                 android:textColor="@color/white"
-                android:layout_marginTop="@dimen/margin_xxlarge"
-                android:layout_marginLeft="@dimen/margin_medium_2_18"
-                android:elevation="@dimen/margin_large"/>
+                android:layout_marginTop="@dimen/margin_large"/>
 
-            <include
-                android:layout_below="@+id/tvCast"
-                android:id="@+id/vpCastList"
-                android:layout_width="match_parent"
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_below="@id/tvCast"
+                android:id="@+id/rvCastList"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                layout="@layout/view_pod_cast_list"
-                android:layout_marginTop="@dimen/margin_medium_10"
-                android:layout_marginHorizontal="@dimen/margin_medium_2"/>
+                android:clipToPadding="false"
+                android:layout_marginVertical="@dimen/margin_medium_3" />
 
         </RelativeLayout>
 
-
     </androidx.core.widget.NestedScrollView>
 
-    <!-- BtnBooking and Gradient   -->
     <androidx.appcompat.widget.AppCompatImageView
         android:id="@+id/btnBooking"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:backgroundTint="@android:color/transparent"
-        android:src="@drawable/btnbooking"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/margin_medium_2"
-        android:elevation="@dimen/margin_medium"
-        android:layout_gravity="bottom|center_horizontal"/>
+        android:src="@drawable/button_booking"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginBottom="@dimen/margin_medium"
+        android:elevation="@dimen/margin_xsmall"/>
 
     <View
-        android:background="@drawable/gradient_movie_detail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:background="@drawable/background_movie_detail_gradient"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

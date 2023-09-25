@@ -1,128 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.activities.login.OTPActivity"
-    android:background="@color/bg">
+    tools:context=".activities.login.OtpActivity"
+    android:background="@color/background">
 
-    <RelativeLayout
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/margin_large">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/ivCinemaLogo"
-            android:layout_width="@dimen/width_logging_logo"
-            android:layout_height="@dimen/height_logging_logo"
-            android:src="@drawable/logo"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/margin_large"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_below="@id/ivCinemaLogo"
-            android:id="@+id/tvVerifyPhoneNo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/dmsmedium"
-            android:text="@string/lbl_otp_sent"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_regular_3x"
-            android:layout_marginTop="@dimen/margin_xlarge"
-            android:layout_centerHorizontal="true"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_below="@id/tvVerifyPhoneNo"
-            android:id="@+id/tvSendSmsCode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_regular"
-            android:text="@string/lbl_otp_code"
-            android:textColor="@color/textPrimary"
-            android:textAlignment="center"
-            android:layout_marginTop="@dimen/margin_medium_10"
-            android:layout_centerHorizontal="true"/>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_below="@id/tvSendSmsCode"
-            android:id="@+id/tvOTPCode"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/text_small"
-            android:text="@string/lbl_otp_enter"
-            android:textColor="@color/textPrimary"
-            android:layout_marginTop="@dimen/margin_xxlarge"
-            android:layout_marginHorizontal="@dimen/margin_xlarge"/>
-
-        <in.aabhasjindal.otptextview.OtpTextView
-            android:layout_below="@id/tvOTPCode"
-            android:id="@+id/otpView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="@color/black"
-            app:height="@dimen/margin_xxlarge"
-            app:width="@dimen/margin_xxlarge"
-            app:length="6"
-            app:otp=""
-            app:otp_text_size="24dp"
-            app:otp_box_background="@color/white"
-            android:layout_marginTop="@dimen/margin_medium"
-            android:layout_marginHorizontal="@dimen/margin_xlarge"/>
-
-        <LinearLayout
-            android:id="@+id/llResendCode"
-            android:layout_below="@id/otpView"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginHorizontal="@dimen/margin_xxxxlarge"
-            android:layout_marginTop="@dimen/margin_xlarge">
+            android:layout_height="wrap_content">
 
-            <androidx.appcompat.widget.AppCompatTextView
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnBackOtpScreen"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/interregular"
-                android:text="@string/lbl_otp_not_receive"
-                android:textColor="@color/white"
-                android:textSize="@dimen/text_regular_2x"/>
+                android:src="@drawable/login_back"
+                android:layout_marginTop="@dimen/margin_medium_3_22"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/ivLogo"
+                android:layout_width="@dimen/width_logo"
+                android:layout_height="@dimen/height_logo"
+                android:src="@drawable/logo"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_82dp"/>
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/tvResendCode"
+                android:layout_below="@id/ivLogo"
+                android:id="@+id/tvSentCode"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/interregular"
-                android:text="@string/lbl_otp_resend_code"
-                android:textColor="@color/green"
-                android:textSize="@dimen/text_regular_2x"/>
+                android:fontFamily="@font/dmsans_medium"
+                android:text="@string/lbl_otp_send"
+                android:textColor="@color/colorTextPrimary"
+                android:textSize="@dimen/text_regular_3x_22"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/margin_30dp"
+                android:layout_marginTop="@dimen/margin_100dp"/>
 
-        </LinearLayout>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_below="@id/tvSentCode"
+                android:id="@+id/tvOtpCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_regular"
+                android:text="@string/lbl_otp_code"
+                android:textSize="@dimen/text_regular"
+                android:textAlignment="center"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_centerHorizontal="true"
+                android:layout_marginHorizontal="@dimen/margin_xxxlarge"
+                android:layout_marginTop="@dimen/margin_medium"/>
 
-        <androidx.appcompat.widget.AppCompatButton
-            android:layout_below="@+id/llResendCode"
-            android:id="@+id/btnConfirm"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/dmsmedium"
-            android:text="@string/lbl_otp_confirm"
-            android:textSize="@dimen/text_regular_2x"
-            android:layout_marginTop="@dimen/margin_xxlarge"
-            android:layout_marginHorizontal="@dimen/margin_xlarge"
-            android:background="@drawable/background_logging_button"
-            android:textAllCaps="false"/>
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_below="@id/tvOtpCode"
+                android:id="@+id/tvEnterCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/lbl_otp_enter"
+                android:textSize="@dimen/text_small"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_marginTop="@dimen/margin_xxxxlarge"/>
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvTerms"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/dmsmedium"
-            android:text="@string/lbl_logging_policy_terms"
-            android:textSize="@dimen/text_small"
-            android:textColor="@color/textSecondary"
-            android:textAlignment="center"
-            android:layout_centerHorizontal="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/margin_large"/>
+            <com.mukeshsolanki.OtpView
+                android:layout_below="@id/tvEnterCode"
+                android:id="@+id/otpView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:itemBackground="@drawable/background_otp_view"
+                android:textColor="@color/black"
+                app:OtpItemCount="6"
+                app:OtpItemSpacing="@dimen/margin_medium_10"
+                app:OtpLineColor="@color/white"
+                app:OtpState_filled="true"
+                app:OtpViewType="line"
+                android:layout_marginTop="@dimen/margin_medium"
+                android:layout_marginStart="@dimen/margin_small"/>
 
-    </RelativeLayout>
+            <LinearLayout
+                android:layout_below="@id/otpView"
+                android:id="@+id/llResendCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/margin_xxlarge">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_regular"
+                    android:text="@string/lbl_otp_receive"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="@dimen/margin_small"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/btnResendCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/lbl_otp_resend_code"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:layout_below="@id/llResendCode"
+                android:id="@+id/btnConfirmOtp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="@string/lbl_otp_confirm_btn"
+                android:textColor="@color/black"
+                android:textAllCaps="false"
+                android:background="@drawable/background_confirm_otp_button"
+                android:layout_marginTop="@dimen/margin_xxlarge"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_below="@id/btnConfirmOtp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/dmsans_medium"
+                android:text="@string/lbl_login_policy"
+                android:textSize="@dimen/text_small"
+                android:textAlignment="center"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/colorTextSecondary"
+                android:layout_marginTop="@dimen/margin_100dp"
+                android:layout_marginBottom="@dimen/margin_xlarge"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
