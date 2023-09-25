@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="170dp"
+    android:layout_height="220dp"
+    android:background="@drawable/background_snack_box"
+    android:layout_marginStart="@dimen/margin_medium_2"
+    android:layout_marginBottom="@dimen/margin_large">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/margin_medium_10">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivSnack"
+            android:layout_width="120dp"
+            android:layout_height="105dp"
+            android:src="@drawable/snack"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/ivSnack"
+            android:id="@+id/tvSnackName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="Potato Chips"
+            android:textSize="@dimen/text_small"
+            android:textColor="@color/white"
+            android:layout_marginTop="@dimen/margin_medium_12"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/tvSnackName"
+            android:id="@+id/tvSnackPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="1000KS"
+            android:textSize="@dimen/text_small"
+            android:textColor="@color/colorAccent"
+            android:layout_marginTop="@dimen/margin_small"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnAddSnack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_add"
+            android:layout_alignParentBottom="true"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llSnackCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="@dimen/margin_small"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnPlus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_plus"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSnackCount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_bold"
+            android:text="1"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_regular_2x"
+            android:layout_marginHorizontal="@dimen/margin_medium"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/btnMinus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/button_minus"/>
+
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dialog.CancellationPolicyFragment"
+    android:background="#80000000">
+
+    <RelativeLayout
+        android:layout_width="@dimen/margin_320dp"
+        android:layout_height="@dimen/margin_462dp"
+        android:background="@drawable/background_dialog"
+        android:layout_gravity="center">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/margin_medium_3_22">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/lbl_checkout_ticket_policy"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_regular" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_medium_3">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/snack_food"
+                    android:tint="@color/white"
+                    android:layout_marginEnd="@dimen/margin_medium_2"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_dialog_refund"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/margin_medium_2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ticket"
+                    android:tint="@color/white"
+                    android:layout_marginEnd="@dimen/margin_medium_12"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_dialog_refund_ticket"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:gravity="center_vertical"/>
+
+            </LinearLayout>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/lbl_dialog_75"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/colorTextSeat"
+                android:layout_marginTop="@dimen/margin_large"
+                android:layout_marginStart="@dimen/margin_40dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/lbl_dialog_50"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/colorTextSeat"
+                android:layout_marginTop="@dimen/margin_medium_10"
+                android:layout_marginStart="@dimen/margin_40dp"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="@string/lbl_dialog_1"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_xlarge"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="2.  No cancelation within 20minute of show start time."
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/margin_medium_3"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnClose"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_40dp"
+                android:fontFamily="@font/inter_semibold"
+                android:text="Close"
+                android:textAllCaps="false"
+                android:background="@drawable/background_snack_button"
+                android:layout_marginTop="@dimen/margin_large"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

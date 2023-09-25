@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="spinner_facilities">
+        <item>Facilities</item>
+        <item>Parking</item>
+        <item>Online Food</item>
+        <item>Wheel Chair</item>
+        <item>Ticket Cancellation</item>
+    </array>
+
+    <array name="spinner_format">
+        <item>Format</item>
+        <item>Format1</item>
+        <item>Format2</item>
+        <item>Format3</item>
+        <item>Format4</item>
+    </array>
+
+
+    <array name="initial_slider_values_price">
+        <item>3500</item>
+        <item>29500</item>
+    </array>
+
+    <array name="initial_slider_values_time">
+        <item>8</item>
+        <item>24</item>
+    </array>
+
+</resources>

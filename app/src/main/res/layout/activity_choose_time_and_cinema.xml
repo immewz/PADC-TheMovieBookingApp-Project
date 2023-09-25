@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.movies.ChooseTimeAndCinemaActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/background"
+            android:layout_marginHorizontal="@dimen/margin_large">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackChooseTimeAndCinemaScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"
+                    android:layout_gravity="center_vertical"/>
+
+                <RelativeLayout
+                    android:id="@+id/rlButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical">
+
+                    <FrameLayout
+                        android:layout_toStartOf="@id/btnSearchMovie"
+                        android:id="@+id/flLocation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_medium_2">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/location_main"
+                                android:layout_margin="@dimen/margin_small"
+                                android:paddingEnd="@dimen/margin_card_medium"/>
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/tvLocation"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/inter_bold"
+                                android:text="@string/lbl_main_location"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/text_regular_2x"
+                                android:textStyle="italic"
+                                android:paddingEnd="@dimen/margin_card_medium"/>
+
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_toStartOf="@id/btnFilter"
+                        android:id="@+id/btnSearchMovie"
+                        android:layout_width="@dimen/margin_xlarge"
+                        android:layout_height="@dimen/margin_xlarge"
+                        android:src="@drawable/baseline_search_green_24dp"
+                        android:tint="@color/white"
+                        android:layout_centerVertical="true"
+                        android:layout_marginEnd="@dimen/margin_large"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/cinema_filter"
+                        android:layout_centerVertical="true"
+                        android:tint="@color/white"
+                        android:layout_marginEnd="@dimen/margin_small"
+                        android:layout_alignParentEnd="true"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_medium_10">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvDateCardList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:layout_marginHorizontal="@dimen/margin_medium"/>
+
+                <LinearLayout
+                    android:layout_below="@id/rvDateCardList"
+                    android:id="@+id/llDimension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="4"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginVertical="@dimen/margin_xlarge">
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_dimension_box">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_choose_cinema_2d"
+                            android:textColor="@color/white"
+                            android:paddingHorizontal="@dimen/margin_medium_x_13"
+                            android:paddingVertical="5dp"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_dimension_box"
+                        android:layout_marginStart="@dimen/margin_large">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_choose_cinema_3d"
+                            android:textColor="@color/white"
+                            android:paddingHorizontal="@dimen/margin_medium_x_13"
+                            android:paddingVertical="5dp"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_dimension_box"
+                        android:layout_marginStart="@dimen/margin_large">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_choose_cinema_2d_3d_imax"
+                            android:textColor="@color/white"
+                            android:paddingHorizontal="@dimen/margin_medium_x_13"
+                            android:paddingVertical="5dp"/>
+
+                    </FrameLayout>
+
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_dimension_box"
+                        android:layout_marginStart="@dimen/margin_large">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_choose_cinema_2d_3d_dbox"
+                            android:textColor="@color/white"
+                            android:paddingHorizontal="@dimen/margin_medium_x_13"
+                            android:paddingVertical="@dimen/margin_5dp"/>
+
+                    </FrameLayout>
+                    
+                </LinearLayout>
+                
+                <LinearLayout
+                    android:layout_below="@id/llDimension"
+                    android:id="@+id/llCinemaSituation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_37dp"
+                    android:background="@color/colorSituation"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin_large"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tvGreenDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ellipse_movie"
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium_10"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_toEndOf="@id/tvGreenDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/lbl_choose_cinema_available"
+                            android:textColor="@color/colorAccent"
+                            android:textSize="@dimen/text_regular_2x"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tvOrangeDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ellipse_movie"
+                            android:tint="@color/colorOrange"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium_10"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_toEndOf="@id/tvOrangeDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/lbl_choose_cinema_filling_fast"
+                            android:textColor="@color/colorOrange"
+                            android:textSize="@dimen/text_regular_2x"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tvPinkDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ellipse_movie"
+                            android:tint="@color/colorPink"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium_10"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_toEndOf="@id/tvPinkDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/lbl_choose_cinema_almost_full"
+                            android:textColor="@color/colorPink"
+                            android:textSize="@dimen/text_regular_2x"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <include
+                    android:layout_below="@id/llCinemaSituation"
+                    android:id="@+id/vpCinemaList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/viewpod_cinema" />
+
+            </RelativeLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.CinemaFragment"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="@dimen/margin_large">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_weight="2">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackCinemaScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"/>
+
+                <androidx.appcompat.widget.AppCompatEditText
+                    android:id="@+id/edtSearchCinema"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/inter_regular"
+                    android:drawableStart="@drawable/cinema_search"
+                    android:hint="@string/lbl_cinema_search_cinema"
+                    android:textSize="@dimen/text_regular"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/colorTextSearch"
+                    android:background="@color/background"
+                    android:layout_marginEnd="@dimen/margin_medium_10"
+                    android:layout_weight="2"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnFilter"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/cinema_filter"
+                    android:tint="@color/white"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:id="@+id/rlFilterView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_medium_10"
+                    android:layout_marginBottom="@dimen/margin_medium_2"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/llSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="30dp"
+                        android:orientation="horizontal">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerFacilities"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/margin_medium_12"
+                            android:background="@drawable/background_cinema_spinner" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinnerFormat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/background_cinema_spinner"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_below="@id/llSpinner"
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/lbl_cinema_price_range"
+                        android:textSize="@dimen/text_regular"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/margin_xlarge"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_below="@id/tvPrice"
+                        android:id="@+id/tvLowPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="@string/lbl_cinema_low_price"
+                        android:textColor="@color/colorTextSecondary"
+                        android:layout_marginTop="@dimen/margin_medium_3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_below="@id/tvPrice"
+                        android:id="@+id/tvHighPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="@string/lbl_cinema_high_price"
+                        android:textColor="@color/colorTextSecondary"
+                        android:layout_marginTop="@dimen/margin_medium_3"
+                        android:layout_alignParentEnd="true"/>
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:layout_below="@id/tvLowPrice"
+                        android:id="@+id/rangeSliderPrice"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:valueFrom="3500"
+                        android:valueTo="29500"
+                        app:values="@array/initial_slider_values_price"
+                        app:trackColorActive="@color/colorAccent"
+                        app:trackColorInactive="@color/colorTextSecondary"
+                        app:thumbColor="@color/colorAccent"
+                        android:layout_marginTop="@dimen/margin_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_below="@id/rangeSliderPrice"
+                        android:id="@+id/tvShowTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_semibold"
+                        android:text="@string/lbl_cinema_show_times"
+                        android:textSize="@dimen/text_regular"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="@dimen/margin_xlarge"/>
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_below="@id/tvShowTime"
+                        android:id="@+id/tvStartTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="8am"
+                        android:textColor="@color/colorTextSecondary"
+                        android:layout_marginTop="@dimen/margin_medium_3"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_below="@id/tvShowTime"
+                        android:id="@+id/tvEndTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/inter_medium"
+                        android:text="12pm"
+                        android:textColor="@color/colorTextSecondary"
+                        android:layout_marginTop="@dimen/margin_medium_3"
+                        android:layout_alignParentEnd="true"/>
+
+                    <com.google.android.material.slider.RangeSlider
+                        android:layout_below="@id/tvStartTime"
+                        android:id="@+id/rangeSliderTime"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:valueFrom="8"
+                        android:valueTo="24"
+                        app:values="@array/initial_slider_values_time"
+                        app:trackColorActive="@color/colorAccent"
+                        app:trackColorInactive="@color/colorTextSecondary"
+                        app:thumbColor="@color/colorAccent"
+                        android:layout_marginTop="@dimen/margin_small" />
+
+
+                </RelativeLayout>
+
+                <include
+                    android:layout_below="@id/rlFilterView"
+                    android:id="@+id/vpCinemaList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    layout="@layout/viewpod_cinema"
+                    android:layout_marginBottom="@dimen/margin_large"/>
+
+            </RelativeLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

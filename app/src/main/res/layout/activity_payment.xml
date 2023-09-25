@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.movies.PaymentActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="@dimen/margin_large">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackPaymentScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:text="@string/lbl_payment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_3x_22"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                android:layout_marginVertical="@dimen/margin_large">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/tilName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    app:boxStrokeWidthFocused="2dp"
+                    android:hint="@string/lbl_payment_name_hint"
+                    app:hintTextColor="@color/colorAccent"
+                    app:boxStrokeColor="@drawable/background_text_field"
+                    app:boxStrokeWidth="@dimen/margin_xsmall"
+                    android:enabled="true"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2">
+
+                    <androidx.appcompat.widget.AppCompatEditText
+                        android:id="@+id/edtName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_bold"
+                        android:hint="@string/lbl_payment_name_hint"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_regular"
+                        android:textColorHint="@color/colorSeatRow" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_below="@id/tilName"
+                    android:id="@+id/btnOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/profile_offer"
+                    android:drawableTint="@color/black"
+                    android:drawablePadding="@dimen/margin_small"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:textSize="@dimen/text_regular"
+                    android:text="@string/lbl_payment_offer"
+                    android:textAllCaps="false"
+                    android:background="@drawable/background_snack_button"
+                    android:layout_marginHorizontal="@dimen/margin_medium_2"
+                    android:paddingHorizontal="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_xlarge"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_below="@id/btnOffer"
+                    android:id="@+id/tvPaymentType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:text="@string/lbl_payment_type"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular_2x_18"
+                    android:layout_marginTop="@dimen/margin_xxlarge"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_below="@id/tvPaymentType"
+                    android:id="@+id/rvPaymentList"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:clipToPadding="false"
+                    android:layout_marginTop="@dimen/margin_large"/>
+
+
+            </RelativeLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

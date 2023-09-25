@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.login.LocationActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvRegion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsans_medium"
+            android:text="@string/lbl_location_pick_region"
+            android:textSize="@dimen/text_regular_2x"
+            android:textColor="@color/colorAccent"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/margin_large"/>
+
+        <LinearLayout
+            android:layout_below="@id/tvRegion"
+            android:id="@+id/llSearchLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginHorizontal="@dimen/margin_large"
+            android:layout_marginTop="@dimen/margin_xxlarge"
+            android:weightSum="3">
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtSearchLocation"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/margin_50dp"
+                android:fontFamily="@font/inter_regular"
+                android:drawableStart="@drawable/baseline_search_green_24dp"
+                android:drawablePadding="@dimen/margin_medium_10"
+                android:hint="@string/lbl_locatin_search_hint"
+                android:textSize="@dimen/text_regular"
+                android:textColor="@color/white"
+                android:textColorHint="@color/colorTextSearch"
+                android:background="@drawable/background_search_location"
+                android:paddingStart="@dimen/margin_medium_3"
+                android:layout_weight="3"
+                android:layout_marginEnd="@dimen/margin_medium_10"/>
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/btnSearchLocation"
+                android:layout_width="@dimen/margin_50dp"
+                android:layout_height="@dimen/margin_50dp"
+                android:src="@drawable/location"
+                android:background="@drawable/background_search_button" />
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_below="@id/llSearchLocation"
+            android:id="@+id/ivCities"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/cities"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/margin_xlarge"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_below="@id/ivCities"
+            android:id="@+id/tvCities"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_40dp"
+            android:fontFamily="@font/inter_regular"
+            android:text="@string/lbl_location_cities"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_regular_2x"
+            android:background="@color/colorCities"
+            android:gravity="center_vertical"
+            android:paddingStart="@dimen/margin_large"
+            tools:ignore="RtlSymmetry" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@id/tvCities"
+            android:id="@+id/rvCitiesList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

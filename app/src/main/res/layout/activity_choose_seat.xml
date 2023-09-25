@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.movies.ChooseSeatActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/nestedScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/margin_large">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackChooseSeatScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/back"
+                    android:layout_marginStart="@dimen/margin_large"
+                    android:layout_marginTop="@dimen/margin_medium_3"/>
+
+                <FrameLayout
+                    android:id="@+id/flScreen"
+                    android:layout_below="@id/btnBackChooseSeatScreen"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/screen"
+                        android:layout_gravity="center_vertical"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_medium"
+                        android:text="@string/lbl_choose_seat_screen"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_regular_2x"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_medium"/>
+
+                </FrameLayout>
+
+                <com.otaliastudios.zoom.ZoomLayout
+                    android:layout_below="@id/flScreen"
+                    android:id="@+id/zoomLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_370dp"
+                    android:scrollbars="vertical|horizontal"
+                    app:transformation="centerInside"
+                    app:transformationGravity="auto"
+                    app:alignment="center"
+                    app:overScrollHorizontal="false"
+                    app:overScrollVertical="false"
+                    app:overPinchable="true"
+                    app:horizontalPanEnabled="true"
+                    app:verticalPanEnabled="true"
+                    app:zoomEnabled="true"
+                    app:flingEnabled="true"
+                    app:scrollEnabled="true"
+                    app:oneFingerScrollEnabled="true"
+                    app:minZoom="1.0"
+                    app:minZoomType="zoom"
+                    app:maxZoom="2.5"
+                    app:maxZoomType="zoom"
+                    app:hasClickableChildren="true"
+                    android:layout_marginHorizontal="@dimen/margin_small"
+                    android:layout_marginBottom="@dimen/margin_medium_3">
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvSeatList"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:focusableInTouchMode="true"
+                        android:focusable="true"
+                        android:nestedScrollingEnabled="false"
+                        android:clipToPadding="false"
+                        tools:listitem="@layout/viewholder_seat"/>
+
+                </com.otaliastudios.zoom.ZoomLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/zoomLayout"
+                    android:id="@+id/llSeatSituation"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin_37dp"
+                    android:background="@color/colorSituation"
+                    android:orientation="horizontal"
+                    android:weightSum="3">
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/margin_large"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tvGreenDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/eclipse_seat"
+                            android:tint="@color/white"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium_10"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_toEndOf="@id/tvGreenDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/lbl_choose_cinema_available"
+                            android:textColor="@color/colorTextSeat"
+                            android:textSize="@dimen/text_regular"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tvOrangeDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/eclipse_seat"
+                            android:tint="@color/colorTextSeat"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium_10"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_toEndOf="@id/tvOrangeDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/lbl_choose_cinema_filling_fast"
+                            android:textColor="@color/colorTextSeat"
+                            android:textSize="@dimen/text_regular"/>
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/tvPinkDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/eclipse_seat"
+                            android:tint="@color/colorAccent"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="@dimen/margin_medium_10"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_toEndOf="@id/tvPinkDot"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_medium"
+                            android:text="@string/lbl_choose_seat_your_selection"
+                            android:textColor="@color/colorTextSeat"
+                            android:textSize="@dimen/text_regular"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/llSeatSituation"
+                    android:id="@+id/llZoomInOrOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_medium_3">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_bold"
+                        android:text="@string/lbl_choose_seat_plus"
+                        android:textSize="@dimen/text_regular_3x"
+                        android:textColor="@color/colorTextSeat"
+                        android:gravity="center_vertical"/>
+
+                    <androidx.appcompat.widget.AppCompatSeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="@dimen/margin_250dp"
+                        android:layout_height="wrap_content"
+                        android:max="100"
+                        android:progress="0"
+                        android:thumbTint="@color/white"
+                        android:progressBackgroundTint="@color/colorTextSeat"
+                        android:progressTint="@color/colorAccent"
+                        android:layout_gravity="center_vertical"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_bold"
+                        android:text="@string/lbl_choose_seat_minus"
+                        android:textSize="@dimen/text_regular_3x"
+                        android:textColor="@color/colorTextSeat"
+                        android:gravity="center_vertical"
+                        android:layout_marginBottom="@dimen/margin_xsmall"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_below="@id/llZoomInOrOut"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_xlarge"
+                    android:layout_marginHorizontal="@dimen/margin_large">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSeatTicketCount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_choose_seat_tickets"
+                            android:textSize="@dimen/text_regular_2x_18"
+                            android:textColor="@color/white"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvSeatTicketPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_choose_seat_price"
+                            android:textSize="@dimen/text_regular_3x"
+                            android:textColor="@color/colorAccent"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnBuyTicket"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/button_buy_ticket"
+                        android:layout_weight="4" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

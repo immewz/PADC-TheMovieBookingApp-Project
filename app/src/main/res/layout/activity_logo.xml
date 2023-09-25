@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.login.LogoActivity"
+    android:background="@color/background">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/ivLogo"
+        android:layout_width="@dimen/width_logo"
+        android:layout_height="@dimen/height_logo"
+        android:src="@drawable/logo"
+        android:layout_centerInParent="true" />
+
+    <LinearLayout
+        android:id="@+id/llLogoName"
+        android:layout_below="@id/ivLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:paddingEnd="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/lbl_logo_C"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/text_regular_3x"
+            android:layout_marginEnd="@dimen/margin_small"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/inter_semibold"
+            android:text="@string/lbl_logo_cinema"
+            android:textColor="@color/colorTextLogo"
+            android:textSize="@dimen/text_regular_3x"/>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:layout_below="@id/llLogoName"
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/colorAccent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/margin_90dp"/>
+
+</RelativeLayout>

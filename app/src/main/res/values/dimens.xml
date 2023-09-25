@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="margin_xsmall">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_card_medium">6dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_medium_10">10dp</dimen>
+    <dimen name="margin_medium_12">12dp</dimen>
+    <dimen name="margin_medium_x_13">13dp</dimen>
+    <dimen name="margin_medium_2">16dp</dimen>
+    <dimen name="margin_medium_2_18">18dp</dimen>
+    <dimen name="margin_medium_3">20dp</dimen>
+    <dimen name="margin_medium_3_22">22dp</dimen>
+    <dimen name="margin_large">24dp</dimen>
+    <dimen name="margin_large_28">28dp</dimen>
+    <dimen name="margin_xlarge">32dp</dimen>
+    <dimen name="margin_xxlarge">48dp</dimen>
+    <dimen name="margin_xxxlarge">64dp</dimen>
+    <dimen name="margin_xxxxlarge">80dp</dimen>
+
+    <dimen name="margin_small_n">-4dp</dimen>
+    <dimen name="margin_card_small_n">-6dp</dimen>
+    <dimen name="margin_medium_n">-8dp</dimen>
+    <dimen name="margin_card_medium_n">-12dp</dimen>
+    <dimen name="margin_medium_2_n">-16dp</dimen>
+    <dimen name="margin_medium_3_n">-18dp</dimen>
+    <dimen name="margin_large_n">-24dp</dimen>
+    <dimen name="margin_xlarge_n">-32dp</dimen>
+    <dimen name="margin_xxlarge_n">-40dp</dimen>
+    <dimen name="margin_xxlarge_48_n">-48dp</dimen>
+    <dimen name="margin_xxxlarge_n">-64dp</dimen>
+
+    <!-- text size    -->
+    <dimen name="text_smallest">8sp</dimen>
+    <dimen name="text_smallest_9">9sp</dimen>
+    <dimen name="text_smaller">10sp</dimen>
+    <dimen name="text_small">12sp</dimen>
+    <dimen name="text_regular">14sp</dimen>
+    <dimen name="text_regular_2x">16sp</dimen>
+    <dimen name="text_regular_2x_18">18sp</dimen>
+    <dimen name="text_regular_3x">20sp</dimen>
+    <dimen name="text_regular_3x_22">22sp</dimen>
+    <dimen name="text_heading_1x">24sp</dimen>
+    <dimen name="text_heading_2x">32sp</dimen>
+    <dimen name="text_big">40sp</dimen>
+    <dimen name="text_big_2x">60sp</dimen>
+    <dimen name="text_big_3x">80sp</dimen>
+
+    <dimen name="width_logo">124dp</dimen>
+    <dimen name="height_logo">150dp</dimen>
+    <dimen name="margin_90dp">90dp</dimen>
+    <dimen name="margin_82dp">82dp</dimen>
+    <dimen name="margin_100dp">100dp</dimen>
+    <dimen name="margin_70dp">70dp</dimen>
+    <dimen name="margin_30dp">30dp</dimen>
+    <dimen name="margin_36dp">36dp</dimen>
+    <dimen name="margin_50dp">50dp</dimen>
+    <dimen name="margin_40dp">40dp</dimen>
+    <dimen name="margin_220dp">220dp</dimen>
+    <dimen name="margin_200dp">200dp</dimen>
+    <dimen name="margin_190dp">190dp</dimen>
+    <dimen name="margin_270dp">270dp</dimen>
+    <dimen name="margin_370dp">370dp</dimen>
+    <dimen name="margin_170dp">170dp</dimen>
+    <dimen name="margin_55dp">55dp</dimen>
+    <dimen name="margin_230dp">230dp</dimen>
+    <dimen name="margin_380dp">380dp</dimen>
+    <dimen name="margin_140dp">140dp</dimen>
+    <dimen name="margin_175dp">175dp</dimen>
+    <dimen name="margin_37dp">37dp</dimen>
+    <dimen name="margin_5dp">5dp</dimen>
+    <dimen name="margin_250dp">250dp</dimen>
+    <dimen name="margin_38dp">38dp</dimen>
+    <dimen name="margin_110dp">110dp</dimen>
+    <dimen name="margin_320dp">320dp</dimen>
+    <dimen name="margin_462dp">462dp</dimen>
+    <dimen name="margin_60dp">60dp</dimen>
+    <dimen name="margin_130dp">130dp</dimen>
+    <dimen name="margin_150dp">150dp</dimen>
+    <dimen name="margin_96dp">96dp</dimen>
+    <dimen name="margin_120dp">120dp</dimen>
+    <dimen name="margin_93dp">93dp</dimen>
+    <dimen name="margin_240dp">240dp</dimen>
+
+</resources>

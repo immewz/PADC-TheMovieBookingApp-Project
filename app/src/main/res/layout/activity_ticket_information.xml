@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.movies.TicketInformationActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/margin_large">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackTicketInformationScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:text="@string/lbl_ticket"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_3x_22"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_xlarge">
+
+                <FrameLayout
+                    android:id="@+id/flTicket"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:background="@drawable/background_ticket">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginVertical="@dimen/margin_medium_3_22"
+                        android:layout_marginHorizontal="@dimen/margin_medium_3">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/mcvMoviePoster"
+                            android:layout_width="@dimen/margin_96dp"
+                            android:layout_height="@dimen/margin_120dp"
+                            app:cardCornerRadius="@dimen/margin_small">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/ivMoviePoster"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/poster"
+                                android:scaleType="centerCrop"/>
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <LinearLayout
+                            android:id="@+id/llTicketAndContent"
+                            android:layout_toEndOf="@id/mcvMoviePoster"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginStart="@dimen/margin_medium_3">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMovieName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_ticket_movie_name"
+                                    android:textSize="@dimen/text_regular_2x_18"
+                                    android:textColor="@color/white"
+                                    android:layout_marginEnd="@dimen/margin_xsmall"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_medium">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCinemaName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_ticket_cinema"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:textColor="@color/colorAccent" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMovieDimension"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_ticket_movie_dimension"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:textColor="@color/white"
+                                    android:layout_marginEnd="@dimen/margin_xsmall"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMovieCensorRating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_ticket_movie_censor"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+
+
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_medium_3">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="M-Ticket("
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/colorTicket"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTicketCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="2"
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/colorAccent"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text=")"
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/colorTicket"/>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSeat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_ticket_seat"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:layout_marginTop="@dimen/margin_card_medium" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvScreen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_ticket_screen"
+                                    android:textColor="@color/colorTextSecondary"
+                                    android:layout_marginTop="@dimen/margin_small" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:weightSum="3"
+                            android:layout_alignParentBottom="true">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/calender"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvDate"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_medium"
+                                    android:text="@string/lbl_ticket_date"
+                                    android:textSize="@dimen/text_small"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center_horizontal"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/margin_small"
+                                android:layout_marginHorizontal="@dimen/margin_medium_2">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/time"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTime"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_medium"
+                                    android:text="@string/lbl_ticket_time"
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center_horizontal"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_weight="1"
+                                android:layout_marginTop="@dimen/margin_small">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/place"
+                                    android:layout_gravity="center_horizontal"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvPlace"
+                                    android:layout_width="110dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_medium"
+                                    android:text="@string/lbl_ticket_place"
+                                    android:textSize="@dimen/text_small"
+                                    android:textColor="@color/white"
+                                    android:textAlignment="center"
+                                    android:layout_gravity="center_horizontal"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/margin_xlarge"
+                        android:weightSum="4">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/left_circle"
+                            android:tint="@color/background"
+                            android:layout_marginTop="@dimen/margin_medium"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="-------------------------------------"
+                            android:layout_weight="4"
+                            android:textSize="@dimen/text_heading_2x"
+                            android:textColor="@color/colorDot"
+                            android:gravity="center_horizontal"
+                            android:layout_marginHorizontal="@dimen/margin_small"/>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/right_circle"
+                            android:tint="@color/background"
+                            android:layout_marginTop="@dimen/margin_medium"/>
+
+                    </LinearLayout>
+
+
+                </FrameLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_below="@id/flTicket"
+                    android:id="@+id/ivQrCode"
+                    android:layout_width="@dimen/margin_93dp"
+                    android:layout_height="@dimen/margin_93dp"
+                    android:src="@drawable/qr_code"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_90dp"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_below="@id/ivQrCode"
+                    android:id="@+id/tvQrCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:text="@string/lbl_ticket_qr_code"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_medium_2"/>
+
+                <LinearLayout
+                    android:layout_below="@id/tvQrCode"
+                    android:id="@+id/llQrCode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_centerHorizontal="true">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_bold"
+                        android:text="@string/lbl_ticket_tpin"
+                        android:textColor="@color/colorTextSeat"
+                        android:textSize="@dimen/text_regular_3x"
+                        android:layout_marginTop="@dimen/margin_xsmall"
+                        android:layout_marginEnd="@dimen/margin_small"/>
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTPQrCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/dmsans_bold"
+                        android:text="@string/lbl_ticket_tpin_code"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_regular_3x"
+                        android:layout_marginTop="@dimen/margin_xsmall"/>
+
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:layout_below="@id/llQrCode"
+                    android:id="@+id/btnDone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_ticket_done_button"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/text_regular_3x"
+                    android:background="@drawable/background_snack_button"
+                    android:paddingVertical="@dimen/margin_medium_12"
+                    android:paddingHorizontal="@dimen/margin_60dp"
+                    android:layout_marginTop="@dimen/margin_90dp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="@dimen/margin_large"/>
+
+
+            </RelativeLayout>
+
+
+
+        </androidx.core.widget.NestedScrollView>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivEnjoyMovie"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/enjoy_movie"
+            android:layout_centerInParent="true"
+            android:background="#CC000000"
+            android:visibility="visible"/>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

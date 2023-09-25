@@ -1,0 +1,165 @@
+<resources>
+    <string name="app_name">The Movie Booking</string>
+
+    <!-- logo -->
+    <string name="lbl_logo_C">C</string>
+    <string name="lbl_logo_cinema">cinema</string>
+
+    <!-- login -->
+    <string name="lbl_login_verify_phone">Verify Your Phone Number</string>
+    <string name="lbl_login_sms_code">We will send 6-digit sms code to verify your phone number</string>
+    <string name="lbl_country_code">Country Code</string>
+    <string name="lbl_login_mobile_number">Mobile Number</string>
+    <string name="lbl_verify_phone_btn">Verify Your Phone Number</string>
+    <string name="lbl_login_or">or</string>
+    <string name="lbl_login_google_btn">Continue With Google</string>
+    <string name="lbl_login_policy"><![CDATA[By clicking, I accept the Terms & Conditions & Privacy Plolicy]]></string>
+
+    <!-- otp -->
+    <string name="lbl_otp_send">We’ve sent OTP Code</string>
+    <string name="lbl_otp_code">Please enter 6-digit OTP code that sent to your phone number.</string>
+    <string name="lbl_otp_enter">Enter OTP Code</string>
+    <string name="lbl_otp_receive">Don’t receive OTP?</string>
+    <string name="lbl_otp_resend_code">Resend Code</string>
+    <string name="lbl_otp_confirm_btn">Confirm OTP</string>
+
+    <!-- location -->
+    <string name="lbl_location_pick_region">Pick Region</string>
+    <string name="lbl_location_cities">Cities</string>
+    <string name="lbl_locatin_search_hint">Search your location</string>
+
+    <!-- main menu -->
+    <string name="menu_movies">Movies</string>
+    <string name="menu_cinema">Cinema</string>
+    <string name="menu_ticket">Ticket</string>
+    <string name="menu_profile">Profile</string>
+
+    <string name="lbl_main_location">Yangon</string>
+
+    <!-- profile -->
+    <string name="lbl_profile_login_btn">Login or Sign Up</string>
+    <string name="lbl_profile_purchase_history">Purchase History</string>
+    <string name="lbl_profile_offer">Offer</string>
+    <string name="lbl_profile_gift_card">Gift Card</string>
+    <string name="lbl_profile_location">Location</string>
+    <string name="lbl_profile_payment">Payment</string>
+    <string name="lbl_profile_help_and_support">Help And Support</string>
+    <string name="lbl_profile_logout">Logout</string>
+
+    <!-- cinema -->
+    <string name="lbl_cinema_search_cinema">Search the cinema</string>
+    <string name="lbl_cinema_price_range">Price Range</string>
+    <string name="lbl_cinema_low_price">3500Ks</string>
+    <string name="lbl_cinema_high_price">29500Ks</string>
+    <string name="lbl_cinema_show_times">Show Times</string>
+    <string name="vh_cinema_see_detail"><u>See Detail</u></string>
+    <string name="lbl_cinema_details">Cinema Details</string>
+
+    <!-- cinema info -->
+    <string name="lbl_cinema_info_name">JCGV : Junction City</string>
+    <string name="lbl_cinema_info_location">Q5H3+JPP, Corner of, Bogyoke Lann, Yangon</string>
+    <string name="lbl_cineam_info_facilities">Facilities</string>
+    <string name="cinema_info_parking">Parking</string>
+    <string name="cinema_info_online_food">Online Food</string>
+    <string name="cinema_info_wheel_chair">Wheel Chair</string>
+    <string name="cinema_info_ticket_cancellation">Ticket Cancellation</string>
+    <string name="lbl_cinema_info_safety">Safety</string>
+
+    <!-- movie info -->
+    <string name="lbl_movie_detail_name">Black Widow</string>
+    <string name="lbl_movie_detail_rating">7.1</string>
+    <string name="lbl_movie_detail_dimension">2D, 3D, 3D IMAX, 3D DBOX</string>
+    <string name="lbl_movie_detail_censor_rating">Censor Rating</string>
+    <string name="lbl_movie_detail_censor">U/A</string>
+    <string name="lbl_movie_detail_release_date">Release date</string>
+    <string name="lbl_movie_detail_date">May 8th, 2022</string>
+    <string name="lbl_movie_detail_duration">Duration</string>
+    <string name="lbl_movie_detail_time">2hr 15min</string>
+    <string name="lbl_movie_detail_story_line">Story Line</string>
+    <string name="lbl_movie_detail_over_view">In the 1970s, young Gru tries to join a group of supervillains called the Vicious 6 after they oust their leader -- the legendary fighter Wild Knuckles. When the interview turns disastrous, Gru and his Minions go on the run with the Vicious 6 hot on their tails. Luckily, he finds an unlikely source for guidance -- Wild Knuckles himself -- and soon discovers that even bad guys need a little help from their friends.</string>
+    <string name="lbl_movie_detail_cast">Cast</string>
+    <string name="lbl_movie_detail_noti_release_day">Releasing in 5 days</string>
+    <string name="lbl_movie_detail_noti_message">Get notify as soon as movie booking opens up in your city!</string>
+
+    <!-- choose cinema and time -->
+    <string name="lbl_choose_cinema_2d">2D</string>
+    <string name="lbl_choose_cinema_3d">3D</string>
+    <string name="lbl_choose_cinema_2d_3d_imax">3D IMAX</string>
+    <string name="lbl_choose_cinema_2d_3d_dbox">3D DBOX</string>
+    <string name="lbl_choose_cinema_available">Available</string>
+    <string name="lbl_choose_cinema_filling_fast">Filling Fast</string>
+    <string name="lbl_choose_cinema_almost_full">Almost Full</string>
+
+    <!-- choose seat -->
+    <string name="lbl_choose_seat_screen">SCREEN</string>
+    <string name="lbl_choose_seat_your_selection">Your Selection</string>
+    <string name="lbl_choose_seat_plus">+</string>
+    <string name="lbl_choose_seat_minus">-</string>
+    <string name="lbl_choose_seat_tickets">2 Tickets</string>
+    <string name="lbl_choose_seat_price">17000KS</string>
+
+    <!-- choose snack-->
+    <string name="lbl_choose_snack_grab">Grab a bite!</string>
+    <string name="lbl_choose_snack_skip">SKIP</string>
+    <string name="lbl_choose_snack_price">0Ks</string>
+
+    <!-- checkout -->
+    <string name="lbl_checkout">Checkout</string>
+    <string name="lbl_checkout_movie_nmae">Black Widow</string>
+    <string name="lbl_checkout_movie_dimension">(3D)</string>
+    <string name="lbl_checkout_movie_censor">(U/A)</string>
+    <string name="lbl_checkout_cinema">JCGV : Junction City</string>
+    <string name="lbl_checkout_cinema_screen">(SCREEN 2)</string>
+    <string name="lbl_checkout_date">Sat, 18 Jun, 2022</string>
+    <string name="lbl_checkout_time">3:30PM</string>
+    <string name="lbl_checkout_location">Q5H3+JPP, Corner of, Bogyoke Lann, Yangon</string>
+    <string name="lbl_checkout_m_ticket">M-Ticket(</string>
+    <string name="lbl_checkout_m_ticket_count">2</string>
+    <string name="lbl_checkout_m_ticket_close">)</string>
+    <string name="lbl_checkout_ticket_seat">Gold-G8,G7</string>
+    <string name="lbl_checkout_seat_price">20000Ks</string>
+    <string name="lbl_checkout_food">Food and Beverage</string>
+    <string name="lbl_checkout_fee">Convenience Fee</string>
+    <string name="lbl_checkout_convenience_fee">500ks</string>
+    <string name="lbl_checkout_total">Total</string>
+    <string name="lbl_checkout_total_price">22500Ks</string>
+    <string name="lbl_checkout_ticket_policy">Ticket Cancellation policy</string>
+
+    <!-- checkout -->
+    <string name="lbl_payment">Payment</string>
+    <string name="lbl_payment_name_hint">Your name</string>
+    <string name="lbl_payment_offer">Unlock Offer or Apply Promocode</string>
+    <string name="lbl_payment_type">Choose your payment type</string>
+
+    <!-- dialog -->
+    <string name="lbl_dialog_refund"><![CDATA[100% Refund on F&B]]></string>
+    <string name="lbl_dialog_refund_ticket">Up to 75% Refund for Tickets</string>
+    <string name="lbl_dialog_75">-75% refund until 2 hours before show start time</string>
+    <string name="lbl_dialog_50">-50% refund between 2 hours and 20 minutes before show start time</string>
+    <string name="lbl_dialog_1">1.Refund not available for Convenience fees,Vouchers, Gift Cards, Taxes etc.</string>
+
+    <!-- ticket -->
+    <string name="lbl_ticket">Ticket Information</string>
+    <string name="lbl_ticket_movie_name">Black Widow</string>
+    <string name="lbl_ticket_movie_dimension">(3D)</string>
+    <string name="lbl_ticket_movie_censor">(U/A)</string>
+    <string name="lbl_ticket_cinema">JCGV : Junction City</string>
+    <string name="lbl_ticket_seat">Gold-G8,G7</string>
+    <string name="lbl_ticket_screen">(Screen 2)</string>
+    <string name="lbl_ticket_date">Sat, 18 Jun, 2022</string>
+    <string name="lbl_ticket_time">3:30PM</string>
+    <string name="lbl_ticket_place">Q5H3+JPP, Corner of, Bogyoke Lann, Yangon</string>
+    <string name="lbl_ticket_qr_code">WAG5LP1C</string>
+    <string name="lbl_ticket_tpin">TPIN :</string>
+    <string name="lbl_ticket_tpin_code">WKCSL96</string>
+    <string name="lbl_ticket_done_button">Done</string>
+
+
+    <string name="lbl_ticket_detail_checkout">Refund Amount</string>
+    <string name="lbl_choose_snack_count">0</string>
+    <string name="lbl_search_movie">search the movie</string>
+
+    <string name="msg_token_fmt">Messaging Token : </string>
+
+
+</resources>

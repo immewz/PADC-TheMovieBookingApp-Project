@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="background">#131313</color>
+
+
+    <color name="colorTextPrimary">#FFFFFFFF</color>
+    <color name="colorTextSecondary">#888888</color>
+    <color name="colorTextSearch">#9E9E9E</color>
+    <color name="colorTextLogo">#666666</color>
+    <color name="colorTextTab">#555555</color>
+    <color name="colorTextSeat">#888888</color>
+    <color name="colorNotiBoardText">#C8C8C8</color>
+
+    <color name="colorTicket">#AAAAAA</color>
+    <color name="colorSituation">#222222</color>
+    <color name="colorSeatRow">#444444</color>
+
+    <color name="colorPolicy">#FF6B00</color>
+    <color name="colorOrange">#FF7A00</color>
+    <color name="colorRefund">#FF2E00</color>
+    <color name="colorPink">#FF00B8</color>
+
+    <color name="colorAccent">#00FF6A</color>
+    <color name="colorDot">#1A888888</color>
+    <color name="colorCities">#3B3B3B</color>
+    <color name="colorChairTaken">#4A4A4B</color>
+    <color name="colorDotIndicator">#323232</color>
+    <color name="colorEclipseMovie">#D9D9D9</color>
+    <color name="divider">#444444</color>
+
+    <color name="colorPlayButton">#80FFFFFF</color>
+</resources>

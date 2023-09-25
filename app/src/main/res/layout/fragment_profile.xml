@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.ProfileFragment"
+    android:background="@color/background">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/margin_large">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <FrameLayout
+                android:id="@+id/flProfile"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_220dp">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/profile_background"/>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="@dimen/margin_100dp"
+                    android:layout_height="@dimen/margin_100dp"
+                    android:src="@drawable/profile_image"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="@dimen/margin_xlarge"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLoginOrSignUp"
+                    android:layout_width="@dimen/margin_200dp"
+                    android:layout_height="@dimen/margin_40dp"
+                    android:fontFamily="@font/inter_medium"
+                    android:text="@string/lbl_profile_login_btn"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="@dimen/text_regular"
+                    android:background="@drawable/background_profile_login_button"
+                    android:paddingVertical="@dimen/margin_medium_10"
+                    android:paddingHorizontal="@dimen/margin_40dp"
+                    android:layout_gravity="center_horizontal|bottom"
+                    android:layout_marginBottom="@dimen/margin_36dp"/>
+
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_below="@id/flProfile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/margin_large"
+                android:layout_marginTop="@dimen/margin_xlarge">
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPurchaseHistory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:drawableStart="@drawable/profile_histroy"
+                    android:drawableEnd="@drawable/profile_forward"
+                    android:drawablePadding="@dimen/margin_medium_10"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_profile_purchase_history"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_marginVertical="@dimen/margin_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorTextSecondary"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnOffer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:drawableStart="@drawable/profile_offer"
+                    android:drawableEnd="@drawable/profile_forward"
+                    android:drawablePadding="@dimen/margin_medium_10"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_profile_offer"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_marginVertical="@dimen/margin_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorTextSecondary"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnGiftCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:drawableStart="@drawable/profile_gift"
+                    android:drawableEnd="@drawable/profile_forward"
+                    android:drawablePadding="@dimen/margin_medium_10"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_profile_gift_card"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_marginVertical="@dimen/margin_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorTextSecondary"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:drawableStart="@drawable/profile_location"
+                    android:drawableEnd="@drawable/profile_forward"
+                    android:drawablePadding="@dimen/margin_medium_2_18"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_profile_location"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_marginVertical="@dimen/margin_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorTextSecondary"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnPayment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:drawableStart="@drawable/profile_payment"
+                    android:drawableEnd="@drawable/profile_forward"
+                    android:drawablePadding="@dimen/margin_medium_10"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_profile_payment"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_marginVertical="@dimen/margin_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorTextSecondary"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnHelpAndSupport"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:drawableStart="@drawable/profile_help"
+                    android:drawableEnd="@drawable/profile_forward"
+                    android:drawablePadding="@dimen/margin_medium_10"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_profile_help_and_support"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_marginVertical="@dimen/margin_medium"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorTextSecondary"/>
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnLogout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/background"
+                    android:drawableStart="@drawable/profile_logout"
+                    android:drawableEnd="@drawable/profile_forward"
+                    android:drawablePadding="@dimen/margin_medium_10"
+                    android:fontFamily="@font/inter_semibold"
+                    android:text="@string/lbl_profile_logout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_2x"
+                    android:textAllCaps="false"
+                    android:textAlignment="textStart"
+                    android:layout_marginVertical="@dimen/margin_medium"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

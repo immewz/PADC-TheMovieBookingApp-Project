@@ -1,0 +1,543 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.movies.CheckoutActivity"
+    android:background="@color/background">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginHorizontal="@dimen/margin_large">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/btnBackCheckoutScreen"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/back"
+                    android:layout_gravity="center_vertical"/>
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvCheckout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/dmsans_bold"
+                    android:text="@string/lbl_checkout"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_regular_3x_22"
+                    android:layout_gravity="center"/>
+
+            </FrameLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_below="@id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="@dimen/margin_medium_2">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/margin_medium_3"
+                android:layout_marginBottom="@dimen/margin_xlarge">
+
+                    <RelativeLayout
+                        android:id="@+id/rlCheckout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/background_checkout_info"
+                        android:paddingBottom="@dimen/margin_medium_2">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_medium_3"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMovieName"
+                                    android:layout_width="@dimen/margin_240dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginEnd="@dimen/margin_xsmall"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_movie_nmae"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_regular_2x" />
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMovieDimension"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_checkout_movie_dimension"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:textColor="@color/white"
+                                    android:layout_marginEnd="@dimen/margin_xsmall"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvMovieCensorRating"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_checkout_movie_censor"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
+                            
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_medium"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvCinemaName"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_checkout_cinema"
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/colorAccent"
+                                    android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvScreen"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_regular"
+                                    android:text="@string/lbl_checkout_cinema_screen"
+                                    android:textColor="@color/colorTextSecondary"
+                                    android:gravity="center_vertical"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="3"
+                                android:layout_marginTop="@dimen/margin_xlarge"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/calender"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvDate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/dmsans_regular"
+                                        android:text="@string/lbl_checkout_date"
+                                        android:textSize="@dimen/text_small"
+                                        android:textColor="@color/white"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="@dimen/margin_small"
+                                    android:layout_marginHorizontal="@dimen/margin_medium_2">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/time"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/dmsans_regular"
+                                        android:text="@string/lbl_checkout_time"
+                                        android:textSize="@dimen/text_small"
+                                        android:textColor="@color/white"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_weight="1"
+                                    android:layout_marginTop="@dimen/margin_small">
+
+                                    <androidx.appcompat.widget.AppCompatImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:src="@drawable/place"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                    <androidx.appcompat.widget.AppCompatTextView
+                                        android:id="@+id/tvPlace"
+                                        android:layout_width="@dimen/margin_110dp"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/dmsans_regular"
+                                        android:text="@string/lbl_checkout_location"
+                                        android:textSize="@dimen/text_small"
+                                        android:textColor="@color/white"
+                                        android:textAlignment="center"
+                                        android:layout_gravity="center_horizontal"/>
+
+                                </LinearLayout>
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_xlarge"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_m_ticket"
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/colorTicket"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTicketCount"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_m_ticket_count"
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/colorAccent"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_m_ticket_close"
+                                    android:textSize="@dimen/text_regular"
+                                    android:textColor="@color/colorTicket"/>
+
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:weightSum="2"
+                                android:layout_marginTop="@dimen/margin_card_medium"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSeat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_ticket_seat"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:layout_weight="1"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSeatTotalPrice"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_seat_price"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:layout_weight="1"
+                                    android:gravity="end"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTextSeat"
+                                android:layout_marginVertical="@dimen/margin_medium_2"
+                                android:layout_marginHorizontal="@dimen/margin_large"/>
+
+                            <LinearLayout
+                                android:id="@+id/llSnackList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/snack_food"
+                                    android:tint="@color/white"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_food"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginHorizontal="@dimen/margin_medium_2"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/btnDownArrow"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/down_arrow"
+                                    android:tint="@color/white"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvSnackTotalPrice"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_bold"
+                                    android:text="@string/lbl_checkout_seat_price"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_regular"
+                                    android:layout_weight="1"
+                                    android:gravity="end"
+                                    android:layout_marginTop="@dimen/margin_xsmall"/>
+
+                            </LinearLayout>
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvSnackList"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_medium_2"
+                                android:layout_marginBottom="@dimen/margin_medium"
+                                android:visibility="visible"
+                                android:layout_marginHorizontal="@dimen/margin_large" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/margin_medium_3">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/left_circle" />
+                                
+                                <View
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:background="@color/colorTextTab"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginHorizontal="@dimen/margin_xlarge"/>
+
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/right_circle"
+                                    android:layout_alignParentEnd="true"/>
+
+
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/margin_medium_2"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_medium"
+                                    android:text="@string/lbl_checkout_fee"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:layout_marginEnd="@dimen/margin_medium"/>
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:id="@+id/btnShowPolicy"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/down_arrow"
+                                    android:tint="@color/white"
+                                    android:layout_gravity="center_vertical"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_medium"
+                                    android:text="@string/lbl_checkout_convenience_fee"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_regular_2x"
+                                    android:gravity="end"
+                                    android:layout_weight="1"/>
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/btnTicketCancel"
+                                android:layout_width="191dp"
+                                android:layout_height="@dimen/margin_large_28"
+                                android:orientation="horizontal"
+                                android:background="@drawable/background_cancel_policy"
+                                android:layout_marginHorizontal="@dimen/margin_large"
+                                android:layout_marginTop="@dimen/margin_medium_3">
+
+                                <androidx.appcompat.widget.AppCompatImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:src="@drawable/cinema_info"
+                                    android:tint="@color/white"
+                                    android:layout_marginStart="@dimen/margin_medium"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginEnd="@dimen/margin_card_medium"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/dmsans_medium"
+                                    android:text="@string/lbl_checkout_ticket_policy"
+                                    android:textSize="@dimen/text_small"
+                                    android:textColor="@color/white"
+                                    android:layout_gravity="center_vertical"/>
+
+                            </LinearLayout>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:background="@color/colorTextSeat"
+                                android:layout_marginHorizontal="@dimen/margin_large"
+                                android:layout_marginVertical="@dimen/margin_xlarge"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginHorizontal="@dimen/margin_large">
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:text="@string/lbl_checkout_total"
+                                    android:textSize="@dimen/text_regular_2x_18"
+                                    android:textColor="@color/colorAccent"
+                                    android:layout_weight="1"/>
+
+                                <androidx.appcompat.widget.AppCompatTextView
+                                    android:id="@+id/tvTotalPrice"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/inter_bold"
+                                    android:text="@string/lbl_checkout_total_price"
+                                    android:textSize="@dimen/text_regular_2x_18"
+                                    android:textColor="@color/colorAccent"
+                                    android:layout_weight="1"
+                                    android:gravity="end"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_below="@id/rlCheckout"
+                    android:id="@+id/btnContinue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/button_continue"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/margin_xxlarge" />
+
+                <LinearLayout
+                    android:layout_below="@id/rlCheckout"
+                    android:id="@+id/llCancelBooking"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/margin_xxlarge"
+                    android:layout_marginHorizontal="@dimen/margin_card_medium"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRefunAmount"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_ticket_detail_checkout"
+                            android:textSize="@dimen/text_regular_2x"
+                            android:textColor="@color/white"/>
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvRefundPrice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/inter_bold"
+                            android:text="@string/lbl_choose_seat_price"
+                            android:textSize="@dimen/text_regular_3x"
+                            android:textColor="@color/colorRefund"/>
+
+                    </LinearLayout>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/btnCancelBooking"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/button_cancel_booking"
+                        android:layout_weight="8" />
+
+                </LinearLayout>
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.core.widget.NestedScrollView>
+
+
+    </RelativeLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

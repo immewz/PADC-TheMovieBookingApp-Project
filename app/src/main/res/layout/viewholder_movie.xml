@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="172dp"
+    android:layout_height="254dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_movie"
+    android:layout_marginVertical="@dimen/margin_medium"
+    android:layout_marginHorizontal="@dimen/margin_small">
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="fill_parent"
+        android:layout_height="212dp"
+        app:cardCornerRadius="@dimen/margin_medium">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/ivMoviePoster"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/movie_poster"
+            android:scaleType="centerCrop"
+            android:layout_gravity="top|center_horizontal"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/mcvReleaseDate"
+        android:layout_width="33dp"
+        android:layout_height="@dimen/margin_30dp"
+        android:backgroundTint="@color/colorAccent"
+        app:cardCornerRadius="@dimen/margin_medium"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/margin_medium_10"
+        android:layout_marginEnd="@dimen/margin_medium_10"
+        android:visibility="visible">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvReleaseDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/dmsans_bold"
+            android:text="18th"
+            android:textColor="@color/colorTextTab"
+            android:textSize="@dimen/text_smaller"
+            android:layout_gravity="center"/>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="@dimen/margin_medium"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/margin_medium_2"
+        android:elevation="@dimen/margin_medium">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvMovieName"
+                android:layout_width="@dimen/margin_100dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_medium"
+                android:text="Venom II"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:layout_marginEnd="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_toStartOf="@id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/movie_imdb" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_bold"
+                android:text="9.0"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"
+                android:textStyle="italic"
+                android:layout_alignParentEnd="true"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_small">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvUA"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_semibold"
+                android:text="U/A"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_small"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:layout_toEndOf="@id/tvUA"
+                android:id="@+id/tvEclipse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ellipse_movie"
+                android:layout_marginTop="@dimen/margin_card_medium"
+                android:layout_marginHorizontal="@dimen/margin_medium"/>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_toEndOf="@id/tvEclipse"
+                android:id="@+id/tvMovieDimension"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/inter_regular"
+                android:text="2D, 3D, 3D IMAX"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_smaller"
+                android:layout_marginTop="@dimen/margin_xsmall"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+<!--    <View-->
+<!--        android:layout_width="fill_parent"-->
+<!--        android:layout_height="fill_parent"-->
+<!--        android:background="@drawable/background_movie_gradient"/>-->
+
+</RelativeLayout>
